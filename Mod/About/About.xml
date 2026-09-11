@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Red Wolves Renew</name>
+  <author>Pausbrak - 1.6 port: nelim</author>
+  <packageId>nelim.redwolves</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <url>https://github.com/vbardales/Rimworld-Red-Wolves-Renew</url>
+  <description>Pausbrak's Red Wolves, brought forward to RimWorld 1.6. A smaller, shyer wolf, russet-coated, driven extinct on Earth in the 21st century and cloned back in the 22nd.
+
+I am not the author of this mod. The animal, the textures and the writing are Pausbrak's - all I did was declare it for 1.6 and check that nothing in it had broken. Credit goes to them; mistakes in the update are mine. If they come back to it, or ask me to take this down, I will.
+
+Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2014889466 - source at https://github.com/RadHazard/RimworldRedWolves, last touched December 2022.
+
+What it adds
+
+- The red wolf: two thirds the body size of a timber wolf, hunting smaller prey, harder to provoke and shyer to tame. It takes cold down to -25 degrees and makes less mess than its cousin.
+- Four coats, one plain and three variants, four times out of five.
+- Found sparsely in temperate forest and swamp, and more sparsely still in boreal forest, cold bog and arid shrubland.
+
+Integrations, each loading only if you have the mod it targets
+
+- A Dog Said - patches for red wolf prosthetics.
+- Combat Extended - reworked tools.
+- Pawnmorpher - a red wolf morph, with its own mutations, memories and backstories.
+- Animal Gear and Animal Equipment - sweaters, scarves, flak and plate cut for a red wolf.
+
+What changed in the 1.6 update
+
+Nothing, and that is worth saying plainly. The animal declares no wildness of its own, so it inherits the vanilla wolf's, which moved to a stat correctly on its own. It already used the game's own alternateGraphics for its coats rather than a third-party variants assembly. Its defs are byte for byte the ones Pausbrak shipped for 1.4. All this update does is declare 1.6 and carry the four integrations across with the load conditions the author wrote for them.
+
+No balance value was changed.
+
+Content mod: removing it mid-game will lose any red wolf already in play.
+
+Source, changelog and the full list of what was checked: https://github.com/vbardales/Rimworld-Red-Wolves-Renew
+
+Licensed MIT, like the original. The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to Pausbrak for the wolf.
+
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+    <li>tachyonite.pawnmorpher</li>
+    <li>tachyonite.pawnmorpherpublic</li>
+    <li>Owlchemist.AnimalGear.Equipment</li>
+  </loadAfter>
+</ModMetaData>
