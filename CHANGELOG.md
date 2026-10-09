@@ -19,6 +19,15 @@ The shortest of these updates: the animal itself needed no change at all.
 
 ### Changed
 
+- **The A Dog Said patch is rewritten, because it had stopped working.** It named thirteen recipes
+  one by one and guarded on the display name of A Dog Said 1. ADS 2 renamed every one of them, and
+  ADS 1 is dead: the guard never matched, and had it matched the xpath would have selected nothing.
+  The mod promised prosthetics for the red wolf and delivered none. It now adds the animal to ADS 2's
+  three category lists — `ADS_Cat1`, `ADS_Cat2`, `ADS_Cat3`, where `Wolf_Timber` sits — behind a
+  `PatchOperationConditional` that stays silent when ADS 2 is absent.
+- **`About.xml` declares `loadBefore` on `SamBucher.ADogSaidAnimalProsthetics2`.** That mod copies
+  its category lists onto the real surgery recipes once, at its own pass; a mod loaded after it
+  writes into a list nobody reads again.
 - **`LoadFolders.xml` rewritten for a single version.** The original arbitrated 1.1 through 1.4 and
   their conditional integrations; the folders have moved up out of `1.4/`. The two `IfModActive`
   conditions are Pausbrak's, unchanged, package ids included.
@@ -35,6 +44,7 @@ The shortest of these updates: the animal itself needed no change at all.
 its own, so the change that silently untamed most animal mods on 1.6 could not reach it; it already
 used vanilla `alternateGraphics` for its coats; and it lays no eggs. No balance value was changed.
 
-The four integrations — A Dog Said, Combat Extended, Pawnmorpher, Animal Gear — ship as they
-shipped upstream and have **not** been tested against 1.6 builds of those mods. They are inert
-while their target is absent.
+Three of the four integrations — Combat Extended, Pawnmorpher, Animal Gear — ship as they shipped
+upstream; the fourth is rewritten above. None has been tested against a **running** 1.6 build of
+the mod it targets, only read against its files on disk. All four are inert while their target is
+absent.

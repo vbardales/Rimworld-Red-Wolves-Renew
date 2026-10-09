@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Red Wolves Renew</name>
-  <author>Pausbrak - 1.6 port: nelim</author>
+  <author>Pausbrak - 1.6 adapted by Nelim</author>
   <packageId>nelim.redwolves</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
   <url>https://github.com/vbardales/Rimworld-Red-Wolves-Renew</url>
+  <!-- ADS 2 copies its category lists onto the real surgery recipes once, at its own pass.
+       A mod loaded after it writes into a list nobody reads again. -->
+  <loadBefore>
+    <li>SamBucher.ADogSaidAnimalProsthetics2</li>
+  </loadBefore>
   <description>Pausbrak's Red Wolves, brought forward to RimWorld 1.6. A smaller, shyer wolf, russet-coated, driven extinct on Earth in the 21st century and cloned back in the 22nd.
 
 I am not the author of this mod. The animal, the textures and the writing are Pausbrak's - all I did was declare it for 1.6 and check that nothing in it had broken. Credit goes to them; mistakes in the update are mine. If they come back to it, or ask me to take this down, I will.

@@ -27,22 +27,42 @@ Content mod: removing it mid-save will lose any red wolf already in play.
 
 ## Integrations
 
-Each loads only if the mod it targets is present, through the `LoadFolders.xml` conditions
-Pausbrak wrote:
+Each loads only if the mod it targets is present — the Pawnmorpher and Animal Gear folders through
+the `LoadFolders.xml` conditions Pausbrak wrote, the two patches through a guard of their own:
 
 | Integration | What it adds |
 |---|---|
-| A Dog Said | Prosthetics for the red wolf. |
+| A Dog Said 2 | Prosthetics and bionics for the red wolf, in all three of its categories, where the timber wolf sits. **Rewritten**: Pausbrak's version named ADS 1's recipes and had stopped working. |
 | Combat Extended | Reworked tools. |
 | Pawnmorpher | A red wolf morph, with its own mutations, hediffs, memories and backstories, and the body-part textures that go with them. |
 | Animal Gear / Animal Equipment | Sweaters, scarves, flak and plate cut for a red wolf. |
 
-These are the author's own work and they ship here as they shipped upstream. They are inert while
-their target mod is absent — a conditional folder is never read at all, so nothing in them can
-fail. **None of them has been checked against a 1.6 build of the mod it targets**, because that
-would mean running those mods; what is guaranteed is that their absence costs nothing.
+Three of the four are the author's own work, shipped as they shipped upstream. All four are inert
+while their target mod is absent — a conditional folder is never read at all, and the two patches
+select nothing. **None has been checked against a running 1.6 build of the mod it targets**,
+because that would mean installing and running those mods; what is guaranteed is that their
+absence costs nothing.
 
 ## What changed in the 1.6 update
+
+**One thing, and it is not in the animal.**
+
+### The A Dog Said integration had stopped working
+
+Pausbrak's patch named thirteen recipes one by one — `InstallPegLegAnimal`,
+`InstallBionicEyeAnimal`, `InstallBionicAnimalStomach` and the rest — and guarded on the display
+name of **A Dog Said 1**. A Dog Said 2 renamed every one of those recipes, and ADS 1 is dead. The
+guard never matched; had it matched, the xpath would have selected nothing. The mod promised
+prosthetics for the red wolf and delivered none.
+
+ADS 2 keeps three abstract `RecipeDef`s instead — `ADS_Cat1` (medieval replacements), `ADS_Cat2`
+(+ simple prosthetics), `ADS_Cat3` (+ bionics) — and its own last patch copies their `recipeUsers`
+onto the real surgery bases. The rewritten patch adds the red wolf to all three, which is where
+`Wolf_Timber` sits, and guards with a `PatchOperationConditional` that stays silent when ADS 2 is
+absent. `About.xml` gained a `loadBefore` on it: that category patch runs once, at ADS 2's own
+pass, so a mod loaded after it writes into a list nobody reads again.
+
+### The animal itself
 
 **Nothing**, and that is worth saying plainly rather than padding a list.
 
@@ -72,4 +92,4 @@ any other of my mods, including publishing a continuation of it. All credit must
 ## Credits
 
 - **Pausbrak** — the mod itself, in full: animal, textures, integrations, writing.
-- 1.6 update by nelim. Written with the help of Claude (Anthropic).
+- 1.6 update by Nelim. Written with the help of Claude (Anthropic).

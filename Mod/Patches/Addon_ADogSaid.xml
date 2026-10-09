@@ -1,91 +1,47 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>A Dog Said... Animal Prosthetics</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalStomach"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalKidney"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalLiver"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalLung"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalHeart"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallAnimalBrainStimulator"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallSpineAnimalBionic" or "InstallSpineAnimalSimple"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallJawAnimalBionic" or "InstallJawAnimalSimple"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallNoseAnimalSimple"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallBionicEyeAnimal"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallEarAnimalSimple" or "InstallEarAnimalBionic"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallPegLegAnimal" or "InstallSimpleProstheticLegAnimal" or "InstallBionicLegAnimal"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticTailAnimal"]/recipeUsers</xpath>
-                    <value>
-                        <li>Wolf_Red</li>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
+
+	<!-- Enrols the red wolf in A Dog Said... Animal Prosthetics 2.
+
+	     THIS FILE REPLACES PAUSBRAK'S ORIGINAL, WHICH NO LONGER DID ANYTHING. It named
+	     thirteen recipes one by one - InstallPegLegAnimal, InstallBionicEyeAnimal,
+	     InstallBionicAnimalStomach and the rest - and guarded on the display name of
+	     A Dog Said 1. ADS 2 renamed every one of those recipes, and ADS 1 is dead. Both
+	     halves missed: the guard never matched, and had it matched, the xpath would have
+	     selected nothing.
+
+	     ADS 2 does not name recipes one by one. It keeps three abstract RecipeDefs -
+	     ADS_Cat1 (medieval replacements), ADS_Cat2 (+ simple prosthetics) and ADS_Cat3
+	     (+ bionics) - and its own last patch copies their recipeUsers onto the real surgery
+	     bases. Adding an animal means adding one <li> to those lists, which is what every
+	     ModCompat file in ADS 2 does.
+
+	     All three, because the red wolf is a variant of the timber wolf, and Wolf_Timber
+	     sits in all three of ADS 2's lists. The lists are cumulative.
+
+	     The guard is PatchOperationConditional on ADS_Cat1. Without ADS 2 the xpath selects
+	     nothing, no <nomatch> is declared, and the operation reports success in silence.
+	     Not MayRequire: on an <Operation> that attribute is read by nothing, and the
+	     operation would apply either way.
+
+	     Every branch repeats @Name=. The form [@Name="A" or "B"] is not the test it looks
+	     like - XPath converts each operand of `or` to a boolean, and a non-empty string
+	     literal is always true, so such a predicate matches every RecipeDef in the document.
+
+	     About.xml declares <loadBefore> on ADS 2: its category patch runs once, at its own
+	     pass, so a mod loaded after it writes into a list nobody reads again. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[@Name="ADS_Cat1"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[
+				@Name="ADS_Cat3" or
+				@Name="ADS_Cat2" or
+				@Name="ADS_Cat1"
+			]/recipeUsers</xpath>
+			<value>
+				<li>Wolf_Red</li>
+			</value>
+		</match>
+	</Operation>
+
 </Patch>

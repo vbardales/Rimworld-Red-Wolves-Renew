@@ -18,7 +18,7 @@ Everything the 1.4 folder holds, plus the shared assets at the mod root.
 | File | Origin |
 |---|---|
 | `Defs/Races_Animal_RedWolf.xml` | `1.4/Defs/`, **byte for byte** |
-| `Patches/Addon_ADogSaid.xml` | `1.4/Patches/`, unchanged |
+| `Patches/Addon_ADogSaid.xml` | `1.4/Patches/`, **rewritten** — see below |
 | `Patches/Addon_CombatExtended.xml` | `1.4/Patches/`, unchanged |
 | `ModIntegrations/Pawnmorpher/` | `1.4/ModIntegrations/`, unchanged |
 | `ModIntegrations/AnimalEquipment/` | `1.4/ModIntegrations/`, unchanged |
@@ -65,12 +65,47 @@ the two conditions are Pausbrak's, unchanged, package ids included:
 A conditional folder is not read at all when its condition fails, which is why the Pawnmorpher defs
 can reference Pawnmorpher's own types without risk.
 
+### The A Dog Said patch, rewritten because it did nothing
+
+This is the one place where Pausbrak's file could not be carried over as it stood.
+
+`Addon_ADogSaid.xml` named thirteen recipes one by one — `InstallPegLegAnimal`,
+`InstallBionicEyeAnimal`, `InstallBionicAnimalStomach`, `InstallSimpleProstheticTailAnimal` and the
+rest — inside a `PatchOperationFindMod` guarded on the display name *A Dog Said... Animal
+Prosthetics*. That is **A Dog Said 1**, which is dead. **A Dog Said 2**
+(`SamBucher.ADogSaidAnimalProsthetics2`) renamed every recipe the patch targeted. Both halves
+missed independently: the guard never matched, and had it matched, the xpath would have selected
+nothing. The mod's own description promised prosthetics for the red wolf, which is worse than
+saying nothing.
+
+ADS 2 does not name recipes one by one. It keeps three abstract `RecipeDef`s — `ADS_Cat1` (medieval
+replacements), `ADS_Cat2` (+ simple prosthetics), `ADS_Cat3` (+ bionics) — declared in
+`1.6/Defs/AnimalCategories/Animal_Categories.xml`, and its own last patch copies their
+`recipeUsers` onto the real surgery bases. Adding an animal means adding one `<li>` to those lists,
+which is what every `ModCompat` file in ADS 2 does.
+
+**All three lists**, because the red wolf is a variant of the timber wolf, and `Wolf_Timber` is in
+all three of ADS 2's categories. They are cumulative: sixty animals in the first, fifty-three in
+the second, thirty in the third.
+
+Two details that look optional and are not:
+
+- The guard is a **`PatchOperationConditional` on `ADS_Cat1`**, not `MayRequire`. On an
+  `<Operation>`, `MayRequire` is read by nothing — `Verse.PatchOperation` has no such field — so
+  the operation would apply whether ADS 2 is loaded or not. With the conditional, ADS 2's absence
+  selects nothing, no `<nomatch>` is declared, and the operation reports success in silence.
+- `About.xml` gained **`<loadBefore>SamBucher.ADogSaidAnimalProsthetics2`**. ADS 2's category patch
+  copies those lists onto the real recipes **once**, at its own pass. A mod loaded after it writes
+  into a list nobody reads again — the patch would apply cleanly and still change nothing.
+
 ## What has not been verified
 
-**The four integrations have not been tested against 1.6 builds of the mods they target**, because
-that would mean installing and running A Dog Said, Combat Extended, Pawnmorpher and Animal Gear.
-What is guaranteed is the safe half: while those mods are absent, the two conditional folders are
-never read and the two patches sit inside `PatchOperationFindMod` guards, so none of it can fail.
+**No integration has been tested against a running 1.6 build of the mod it targets**, because that
+would mean installing and running A Dog Said 2, Combat Extended, Pawnmorpher and Animal Gear. The
+A Dog Said patch is written against ADS 2's files as they sit on disk, which is a reading and not a
+run. What is guaranteed is the safe half: while those mods are absent, the two conditional folders
+are never read, the Combat Extended patch sits inside a `PatchOperationFindMod` guard, and the
+A Dog Said patch selects nothing.
 
 ## Verification
 

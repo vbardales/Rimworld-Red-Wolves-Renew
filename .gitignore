@@ -1,0 +1,14 @@
+# test reports: gigabytes, never committed (see AGENTS.md)
+evidence/
+Tests/Pickle/Evidence/
+Art/.render/
+# textures compiled to DDS are build products
+*.dds
+.build/
+**/Source/obj/
+**/Source/bin/
+**/Source/**/obj/
+**/Source/**/bin/
+desktop.ini
+Thumbs.db
+.DS_Store

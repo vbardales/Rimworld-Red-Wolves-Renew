@@ -1,0 +1,62 @@
+# Normalise line endings in the repository, while each machine keeps its own.
+#
+# This file covers the whole monorepo. It does NOT reach the mod repositories: each detached mod
+# is a repository of its own and carries its own copy. Publication by `git subtree split` ended on
+# 2026-09-11, when the mods began leaving for their own repositories, but the per-mod copy is still
+# needed - it just serves a separate repository now rather than a split of this one.
+#
+# Types listed below are the ones actually tracked here, counted rather than guessed.
+
+* text=auto
+
+# ---------- Text ----------
+
+*.xml   text
+*.cs    text diff=csharp
+*.md    text
+*.svg   text
+*.csproj text
+*.props text
+*.json  text
+*.yml   text
+*.txt   text
+*.csv   text
+*.tsv   text
+*.js    text
+*.ps1   text
+*.editorconfig text
+*.manifest text
+
+# Shell scripts break if they are given CRLF; .bat files want it.
+*.sh    text eol=lf
+*.bat   text eol=crlf
+
+# ---------- Binaries: neither normalised nor diffed as text ----------
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.xcf binary
+*.psd binary
+
+# DirectDraw Surface: RimWorld loads a .dds in preference to the .png beside it, and Zen
+# Garden Plus ships one for nearly every texture. Listed rather than left to git's NUL-byte
+# sniffing, and twice because the files on disk are uppercase and attribute patterns are not
+# case-folded.
+*.dds binary
+*.DDS binary
+
+*.ogg binary
+*.wav binary
+*.mp3 binary
+*.dll binary
+*.pdb binary
+*.zip binary
+
+# Unity asset bundle, tracked WITHOUT an extension. Left to `text=auto` it would depend on
+# git's NUL-byte sniffing to be spared normalisation, and this particular file cannot be
+# regenerated: no PNG can be extracted from it, recopying the bundle is the only way to
+# have it. Named explicitly rather than trusted to detection.
+resource_RW_TeaTimeRodent_textures_textures binary
