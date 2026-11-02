@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <RedwolfmorphConservationVolunteerGeneral.title>volontaire de la conservation</RedwolfmorphConservationVolunteerGeneral.title>
+  <RedwolfmorphConservationVolunteerGeneral.title>bénévole de la conservation</RedwolfmorphConservationVolunteerGeneral.title>
   <RedwolfmorphConservationVolunteerGeneral.titleShort>loup rouge</RedwolfmorphConservationVolunteerGeneral.titleShort>
   <RedwolfmorphConservationVolunteerGeneral.baseDescription>[PAWN_nameDef] participait à un projet de conservation animale sur un monde intermédiaire qui refusait de créer la vie par clonage. Faute d'autre moyen légal de ramener des espèces disparues, {PAWN_gender ? il : elle : al} a été volontaire pour se faire transformer en loup rouge. L'expérience a été interrompue avant son terme, mais {PAWN_gender ? il : elle : al} a choisi de garder les mutations acquises.</RedwolfmorphConservationVolunteerGeneral.baseDescription>
   <RedwolfmorphConservationForcedGeneral.title>loup rouge de Wall Street</RedwolfmorphConservationForcedGeneral.title>

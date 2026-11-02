@@ -20,7 +20,7 @@ published: yes
 tested_on: never
 remaining:
   - "2026-11-02: unverified: source mod of the AnimalEquipment integration unknown (guard Owlchemist.AnimalGear.Equipment, upstream id, in no installed mod; Apparel_SmallAnimal* defs in no Animal Gear family mod checked by Audit). Guard is inert when absent; fix the id if the mod shows up on disk"
-  - "2026-11-02: unverified: French review by Virginie (FRENCH_REVIEW.md, 17 rows flagged)"
+  - "2026-11-02: unverified: French review by Virginie (FRENCH_REVIEW.md, 17 rows flagged; ChatGPT page-1 review applied in part: title and ear text corrected, daltonienx kept and flagged)"
   - "2026-11-02: unverified: AlienRace.BackstoryDef keys (2 backstories) not provable by Check-DefInjected (type not resolved); Pawnmorph stagePatches keys are numeric indices into a list merged with the parent, in game only"
   - "2026-11-02: unverified: the game resolving {PAWN_gender} switches in thought and backstory descriptions, raw keys and clipping in game (playTests)"
   - "2026-11-02: unverified: never seen running"
