@@ -7,7 +7,7 @@
 
   <v1.6>
     <li>/</li>
-    <li IfModActive="tachyonite.pawnmorpher, tachyonite.pawnmorpherpublic">ModIntegrations/Pawnmorpher</li>
+    <li IfModActive="tachyonite.pawnmorpherpublic">ModIntegrations/Pawnmorpher</li>
     <li IfModActive="Owlchemist.AnimalGear.Equipment">ModIntegrations/AnimalEquipment</li>
   </v1.6>
 

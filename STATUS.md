@@ -19,7 +19,7 @@ workshop: 3811403044
 published: yes
 tested_on: never
 remaining:
-  - "2026-11-02: unverified: 4.a packageIds. tachyonite.pawnmorpherpublic confirmed (Workshop 1786466855). tachyonite.pawnmorpher and Owlchemist.AnimalGear.Equipment are in no installed mod of the registry (upstream ids, kept unchanged): if Animal Gear is Dylan.AnimalGear the AnimalEquipment folder never loads. Needs the real Animal Gear Workshop id from the owner"
+  - "2026-11-02: unverified: 4.a Animal Gear integration: guard kept as Owlchemist.AnimalGear.Equipment (upstream id, in no installed mod). The eight Apparel_SmallAnimal* defs its patches target are not in Dylan.AnimalGear (1541438907) 1.6 nor Dylan.AnimalGearBasic, so guarding on Dylan.AnimalGear would run patches against missing defs; real source mod and id unknown, owner to find"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-02
 protocols_read_sha: 3aab9cb0a46ad9091084fc47a249b97f4c8fd25e
@@ -35,7 +35,7 @@ Check it with `scripts/Check-Status.ps1 -Mod RedWolvesRenew` (no ERROR).
 - Hard dependencies (`modDependencies`): none. The mod loads and works alone.
 - DLC: none required. `loadAfter` names the five official DLC for ordering only.
 - Optional integrations, all guarded and inert when the target is absent:
-  - Pawnmorpher (`tachyonite.pawnmorpher`, `tachyonite.pawnmorpherpublic`): `ModIntegrations/Pawnmorpher`, loaded by `IfModActive` in `LoadFolders.xml`.
+  - Pawnmorpher (`tachyonite.pawnmorpherpublic`, Workshop 1786466855; the upstream `tachyonite.pawnmorpher` guard was dropped: IfModActive needs every listed id, and that one is installed nowhere, so the folder never loaded): `ModIntegrations/Pawnmorpher`, loaded by `IfModActive` in `LoadFolders.xml`.
   - Animal Gear (`Owlchemist.AnimalGear.Equipment`): `ModIntegrations/AnimalEquipment`, loaded by `IfModActive`.
   - Combat Extended: `Patches/Addon_CombatExtended.xml`, `PatchOperationFindMod`.
   - A Dog Said Animal Prosthetics 2 (`SamBucher.ADogSaidAnimalProsthetics2`, 3238353862): `Patches/Addon_ADogSaid.xml`, `PatchOperationConditional`; `loadBefore` declared.
