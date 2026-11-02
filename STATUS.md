@@ -17,7 +17,7 @@ workshop:
 remaining:
   - "2026-11-02: defect: STATUS.md not from template (remote, settings_audit, upstream_mod_remotes missing), 1.h"
   - "2026-11-02: defect: no git remote, no GitHub repo linked, 1.e/1.f"
-  - "2026-11-02: unverified: 1.a duplicate search and 1.b source/licence not recorded"
+  - "2026-11-02: unverified: 1.b source/licence not recorded (1.a duplicate search done 2026-11-02: only upstream Red Wolves 2014889466 and Dire Wolf 2092915394 carry a red wolf def, no other duplicate)"
   - "2026-11-02: defect: About.xml description names 1.6 (rimworld-version warning)"
   - "2026-11-02: unverified: never seen running"
 session:      maj:        2026-09-12, releve automatique
