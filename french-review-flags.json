@@ -1,0 +1,20 @@
+{
+  "Wolf_Red.label": "Terminology: 'loup rouge' (Canis rufus) chosen over 'loup roux'. Plural 'loups rouges', puppy 'louveteau rouge'.",
+  "RedWolfMorph.label": "Terminology: 'morphe de loup rouge'. Pawnmorpher ships no French, so 'morph' = 'morphe' is my choice.",
+  "RedwolfmorphConservationVolunteerGeneral.baseDescription": "Three-segment switch {PAWN_gender ? il : elle : al} for the subject pronoun (al system). 'a été volontaire pour se faire transformer' chosen so no participle has to agree. 'monde intermédiaire' translates 'Midworld': term not checked against the game's French. Unverified that the game resolves the switch in a backstory description.",
+  "RedwolfmorphConservationForcedGeneral.baseDescription": "Agreeing participles (retrouvé, transformé) written as three-segment switches, neutral forms in -æ. Unverified that the game resolves the switch in a backstory description.",
+  "RedwolfmorphConservationForcedGeneral.title": "English is 'red wolf of wall street' (a pun on a film title): kept as a reference.",
+  "RedWolfRevertedMemory.stages.reverted-0.description": "Switch for 'content' (agrees with the colonist). Thought text is first person: unverified that the game supplies the pawn gender in a thought description.",
+  "RedWolfRevertedMemory.stages.reverted-1.description": "Switch for 'mignon' (agrees with the colonist). Same unverified point on thought descriptions.",
+  "RedWolfTransformationMemory.stages.changed-0.description": "Switch for 'censé' (agrees with the colonist). Same unverified point on thought descriptions.",
+  "RedWolfRevertedMemory.stages.reverted-2.description": "English addresses the body ('how I missed you'); written in the third person so that no 'tu' appears.",
+  "RedWolfTailMemory.stages.Wolf_tail-3.description": "English says 'Look at it wag': imperative addressing a reader, rewritten as a statement so that no vous or tu appears.",
+  "EtherRedWolfMuzzle.stagePatches.21.values.description": "stagePatches keys are numeric: the child's four patches are appended to the parent's list (21 in Pawnmorpher's WolfJawBase). If Pawnmorpher changes that list, the index shifts and a French text lands on the wrong stage. Not seen in game.",
+  "EtherRedWolfEar.stagePatches.6.values.description": "Numeric index, same caveat as the muzzle (6 inherited patches).",
+  "EtherRedWolfTail.stagePatches.6.values.description": "Numeric index, same caveat as the muzzle (6 inherited patches).",
+  "EtherRedWolfEye.stagePatches.2.values.description": "Numeric index, same caveat as the muzzle (2 inherited patches).",
+  "EtherRedWolfEye.stagePatches.4.values.description": "Switch for 'daltonien' (neutral form 'daltonienx' not checked against the al system).",
+  "EtherRedWolfEar.stagePatches.9.values.description": "Switches for 'nerveux' and 'incertain' (neutral forms -x and -æ).",
+  "EtherRedWolfEar.description": "English '(un)fortunate pawn' rewritten as 'une personne, pour son bonheur ou son malheur' (no pawn here, epicene).",
+  "EtherRedWolfMuzzle.description": "'this pawn' written 'la personne' (no pawn gender available here)."
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RedWolfTransformationMemory.stages.changed-0.label>transformation</RedWolfTransformationMemory.stages.changed-0.label>
+  <RedWolfTransformationMemory.stages.changed-0.description>Si je suis {PAWN_gender ? censé : censée : censæ} être un loup, pourquoi tout est-il aussi effrayant ? J'ai envie de me cacher en permanence !</RedWolfTransformationMemory.stages.changed-0.description>
+  <RedWolfTransformationMemory.stages.changed-1.label>transformation</RedWolfTransformationMemory.stages.changed-1.label>
+  <RedWolfTransformationMemory.stages.changed-1.description>Ces oreilles et ce nez sont incroyables, et ce corps est le mélange parfait entre mignon et féroce !</RedWolfTransformationMemory.stages.changed-1.description>
+  <RedWolfTransformationMemory.stages.changed-2.label>transformation</RedWolfTransformationMemory.stages.changed-2.label>
+  <RedWolfTransformationMemory.stages.changed-2.description>Tout est si bruyant et terrifiant, et ces drôles de nouvelles odeurs sont horribles !</RedWolfTransformationMemory.stages.changed-2.description>
+  <RedWolfTransformationMemory.stages.changed-3.label>transformation</RedWolfTransformationMemory.stages.changed-3.label>
+  <RedWolfTransformationMemory.stages.changed-3.description>J'entends le moindre frémissement d'un lapin et je le sens à l'autre bout d'un champ ! C'est incroyable, j'en veux encore !</RedWolfTransformationMemory.stages.changed-3.description>
+  <RedWolfRevertedMemory.stages.reverted-0.label>retour à la normale</RedWolfRevertedMemory.stages.reverted-0.label>
+  <RedWolfRevertedMemory.stages.reverted-0.description>Qui aurait cru qu'un loup pouvait être aussi craintif ? Je suis {PAWN_gender ? content : contente : contentæ} de retrouver mon ancien moi.</RedWolfRevertedMemory.stages.reverted-0.description>
+  <RedWolfRevertedMemory.stages.reverted-1.label>retour à la normale</RedWolfRevertedMemory.stages.reverted-1.label>
+  <RedWolfRevertedMemory.stages.reverted-1.description>Mais j'étais si {PAWN_gender ? mignon : mignonne : mignonæ} avant ! Tous ces sens humains paraissent si ternes en comparaison...</RedWolfRevertedMemory.stages.reverted-1.description>
+  <RedWolfRevertedMemory.stages.reverted-2.label>retour à la normale</RedWolfRevertedMemory.stages.reverted-2.label>
+  <RedWolfRevertedMemory.stages.reverted-2.description>Ces odeurs infectes ont disparu, et je ne sursaute plus de terreur au moindre bruit. Mon corps m'avait tellement manqué !</RedWolfRevertedMemory.stages.reverted-2.description>
+  <RedWolfRevertedMemory.stages.reverted-3.label>retour à la normale</RedWolfRevertedMemory.stages.reverted-3.label>
+  <RedWolfRevertedMemory.stages.reverted-3.description>Mais... mais... j'étais si près du but...</RedWolfRevertedMemory.stages.reverted-3.description>
+  <RedWolfEarMemory.stages.Wolf_ears-0.label>oreilles de loup</RedWolfEarMemory.stages.Wolf_ears-0.label>
+  <RedWolfEarMemory.stages.Wolf_ears-0.description>Ces oreilles n'en font qu'à leur tête ! Leur ouïe est appréciable, mais j'aimerais qu'elles ne trahissent pas si facilement mon humeur...</RedWolfEarMemory.stages.Wolf_ears-0.description>
+  <RedWolfEarMemory.stages.Wolf_ears-1.label>oreilles de loup</RedWolfEarMemory.stages.Wolf_ears-1.label>
+  <RedWolfEarMemory.stages.Wolf_ears-1.description>Elles sont si grandes et si sensibles ! Et elles pivotent pour capter le moindre son !</RedWolfEarMemory.stages.Wolf_ears-1.description>
+  <RedWolfEarMemory.stages.Wolf_ears-2.label>oreilles de loup</RedWolfEarMemory.stages.Wolf_ears-2.label>
+  <RedWolfEarMemory.stages.Wolf_ears-2.description>C'était quoi, ce bruit ?! Je déteste la sensation quand ces fichus machins bougent, et le moindre bruit me fait manquer un battement de cœur !</RedWolfEarMemory.stages.Wolf_ears-2.description>
+  <RedWolfEarMemory.stages.Wolf_ears-3.label>oreilles de loup</RedWolfEarMemory.stages.Wolf_ears-3.label>
+  <RedWolfEarMemory.stages.Wolf_ears-3.description>Enfin des oreilles qui pivotent comme elles le devraient ! J'entends tout !</RedWolfEarMemory.stages.Wolf_ears-3.description>
+  <RedWolfTailMemory.stages.Wolf_tail-0.label>queue de loup</RedWolfTailMemory.stages.Wolf_tail-0.label>
+  <RedWolfTailMemory.stages.Wolf_tail-0.description>Avec la façon dont elle trahit sans cesse mon humeur, je peux dire adieu à la victoire aux soirées poker.</RedWolfTailMemory.stages.Wolf_tail-0.description>
+  <RedWolfTailMemory.stages.Wolf_tail-1.label>queue de loup</RedWolfTailMemory.stages.Wolf_tail-1.label>
+  <RedWolfTailMemory.stages.Wolf_tail-1.description>Elle est si mignonne, elle remue dès que j'y pense ! J'adore, même si elle est moins touffue que les autres queues de loup.</RedWolfTailMemory.stages.Wolf_tail-1.description>
+  <RedWolfTailMemory.stages.Wolf_tail-2.label>queue de loup</RedWolfTailMemory.stages.Wolf_tail-2.label>
+  <RedWolfTailMemory.stages.Wolf_tail-2.description>Impossible de faire semblant de l'ignorer ! Elle est coincée entre mes jambes depuis qu'elle a poussé, et j'ai l'air d'un chien effrayé.</RedWolfTailMemory.stages.Wolf_tail-2.description>
+  <RedWolfTailMemory.stages.Wolf_tail-3.label>queue de loup</RedWolfTailMemory.stages.Wolf_tail-3.label>
+  <RedWolfTailMemory.stages.Wolf_tail-3.description>Avoir une queue me paraît tellement... naturel ! Elle remue dès que j'y pense !</RedWolfTailMemory.stages.Wolf_tail-3.description>
+  <RedWolfMuzzleMemory.stages.Wolf_muzzle-0.label>museau de loup</RedWolfMuzzleMemory.stages.Wolf_muzzle-0.label>
+  <RedWolfMuzzleMemory.stages.Wolf_muzzle-0.description>J'espère qu'avec de l'entraînement je pourrai chasser ce grondement de ma voix, mais ces drôles d'odeurs ne partiront jamais...</RedWolfMuzzleMemory.stages.Wolf_muzzle-0.description>
+  <RedWolfMuzzleMemory.stages.Wolf_muzzle-1.label>museau de loup</RedWolfMuzzleMemory.stages.Wolf_muzzle-1.label>
+  <RedWolfMuzzleMemory.stages.Wolf_muzzle-1.description>Je sens tout avec ça ! *snif snif* Oh, c'est quoi, ça ?</RedWolfMuzzleMemory.stages.Wolf_muzzle-1.description>
+  <RedWolfMuzzleMemory.stages.Wolf_muzzle-2.label>museau de loup</RedWolfMuzzleMemory.stages.Wolf_muzzle-2.label>
+  <RedWolfMuzzleMemory.stages.Wolf_muzzle-2.description>Rrrf, impossible de parler correctement avec cette chose ! J'ai beau essayer, je ressemble trop à une sale bête !</RedWolfMuzzleMemory.stages.Wolf_muzzle-2.description>
+  <RedWolfMuzzleMemory.stages.Wolf_muzzle-3.label>museau de loup</RedWolfMuzzleMemory.stages.Wolf_muzzle-3.label>
+  <RedWolfMuzzleMemory.stages.Wolf_muzzle-3.description>Un vrai museau pour un vrai loup. *snif snif* Oh, c'est quoi, cette odeur ?</RedWolfMuzzleMemory.stages.Wolf_muzzle-3.description>
+  <RedWolfEyeMemory.stages.Wolf_eyes-0.label>yeux de loup</RedWolfEyeMemory.stages.Wolf_eyes-0.label>
+  <RedWolfEyeMemory.stages.Wolf_eyes-0.description>Quoi, le daltonisme ?! Je n'ai pas signé pour ça !</RedWolfEyeMemory.stages.Wolf_eyes-0.description>
+  <RedWolfEyeMemory.stages.Wolf_eyes-1.label>yeux de loup</RedWolfEyeMemory.stages.Wolf_eyes-1.label>
+  <RedWolfEyeMemory.stages.Wolf_eyes-1.description>Je regretterai de ne plus voir les couleurs, mais qu'est-ce qu'ils ont la classe !</RedWolfEyeMemory.stages.Wolf_eyes-1.description>
+  <RedWolfEyeMemory.stages.Wolf_eyes-2.label>yeux de loup</RedWolfEyeMemory.stages.Wolf_eyes-2.label>
+  <RedWolfEyeMemory.stages.Wolf_eyes-2.description>Je ne vois même plus les couleurs comme un humain ! Y a-t-il une limite à l'humiliation ?!</RedWolfEyeMemory.stages.Wolf_eyes-2.description>
+  <RedWolfEyeMemory.stages.Wolf_eyes-3.label>yeux de loup</RedWolfEyeMemory.stages.Wolf_eyes-3.label>
+  <RedWolfEyeMemory.stages.Wolf_eyes-3.description>Oui, oui, c'est exactement ainsi que le monde doit apparaître à un loup !</RedWolfEyeMemory.stages.Wolf_eyes-3.description>
+</LanguageData>

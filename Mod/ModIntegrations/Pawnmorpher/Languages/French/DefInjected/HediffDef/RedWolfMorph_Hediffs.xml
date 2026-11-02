@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PawnmorphRedWolfTF.label>morphe de loup rouge</PawnmorphRedWolfTF.label>
+  <PawnmorphRedWolfTF.description>Cette personne a des mécanites dans le sang qui la transforment lentement en loup rouge. Il faut la surveiller : des mécanites laissées sans surveillance pourraient la faire courir à quatre pattes. Mais serait-ce vraiment si mal ?</PawnmorphRedWolfTF.description>
+  <PawnmorphRedWolfTF.stages.reeling.label>titubant</PawnmorphRedWolfTF.stages.reeling.label>
+  <PawnmorphRedWolfTF.stages.transforming.label>en transformation</PawnmorphRedWolfTF.stages.transforming.label>
+  <PawnmorphRedWolfTF.stages.changing.label>en mutation</PawnmorphRedWolfTF.stages.changing.label>
+  <PawnmorphRedWolfTFPartial.label>morphe de loup rouge partiel</PawnmorphRedWolfTFPartial.label>
+  <PawnmorphRedWolfTFPartial.description>Cette personne a des mécanites dans le sang qui lui donnent des mutations dignes d'un loup rouge.</PawnmorphRedWolfTFPartial.description>
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RedwolfmorphConservationVolunteerGeneral.title>volontaire de la conservation</RedwolfmorphConservationVolunteerGeneral.title>
+  <RedwolfmorphConservationVolunteerGeneral.titleShort>loup rouge</RedwolfmorphConservationVolunteerGeneral.titleShort>
+  <RedwolfmorphConservationVolunteerGeneral.baseDescription>[PAWN_nameDef] participait à un projet de conservation animale sur un monde intermédiaire qui refusait de créer la vie par clonage. Faute d'autre moyen légal de ramener des espèces disparues, {PAWN_gender ? il : elle : al} a été volontaire pour se faire transformer en loup rouge. L'expérience a été interrompue avant son terme, mais {PAWN_gender ? il : elle : al} a choisi de garder les mutations acquises.</RedwolfmorphConservationVolunteerGeneral.baseDescription>
+  <RedwolfmorphConservationForcedGeneral.title>loup rouge de Wall Street</RedwolfmorphConservationForcedGeneral.title>
+  <RedwolfmorphConservationForcedGeneral.titleShort>loup rouge</RedwolfmorphConservationForcedGeneral.titleShort>
+  <RedwolfmorphConservationForcedGeneral.baseDescription>[PAWN_nameDef] siégeait au conseil d'administration d'une multinationale prospère mais désastreuse pour l'environnement, sur son monde natal. Des éco-terroristes radicaux ont bombardé le siège avec un gaz chargé de mutagène, transformant de nombreux administrateurs en ces animaux mêmes que la politique de l'entreprise menaçait. [PAWN_nameDef] a échappé au pire du gaz, mais s'est quand même {PAWN_gender ? retrouvé : retrouvée : retrouvæ} en partie {PAWN_gender ? transformé : transformée : transformæ} en une espèce de loup en voie de disparition.</RedwolfmorphConservationForcedGeneral.baseDescription>
+</LanguageData>
