@@ -19,7 +19,7 @@ workshop: 3811403044
 published: yes
 tested_on: never
 remaining:
-  - "2026-11-02: unverified: 4.a packageIds of tachyonite.pawnmorpher, tachyonite.pawnmorpherpublic, Owlchemist.AnimalGear.Equipment not checked against the mods, 4.d sort-load-order not run"
+  - "2026-11-02: unverified: 4.a packageIds. tachyonite.pawnmorpherpublic confirmed (Workshop 1786466855). tachyonite.pawnmorpher and Owlchemist.AnimalGear.Equipment are in no installed mod of the registry (upstream ids, kept unchanged): if Animal Gear is Dylan.AnimalGear the AnimalEquipment folder never loads. Needs the real Animal Gear Workshop id from the owner"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-02
 protocols_read_sha: 3aab9cb0a46ad9091084fc47a249b97f4c8fd25e
