@@ -5,7 +5,7 @@ repo: Rimworld-Red-Wolves-Renew
 remote: https://github.com/vbardales/Rimworld-Red-Wolves-Renew.git
 visibility: public
 detached: yes
-workflow_stage: declareDependencies[1.0.0]
+workflow_stage: settings[1.0.0]
 licence: open
 licence_at: "2026-11-02: upstream LICENSE is MIT (Ryan Schneider, 2020), confirmed on RadHazard/RimworldRedWolves (spdx MIT); LICENSE and ATTRIBUTION.md carry it"
 upstream_mod_remotes:
@@ -19,7 +19,7 @@ workshop: 3811403044
 published: yes
 tested_on: never
 remaining:
-  - "2026-11-02: unverified: 4.a Animal Gear integration: guard kept as Owlchemist.AnimalGear.Equipment (upstream id, in no installed mod). The eight Apparel_SmallAnimal* defs its patches target are not in Dylan.AnimalGear (1541438907) 1.6 nor Dylan.AnimalGearBasic, so guarding on Dylan.AnimalGear would run patches against missing defs; real source mod and id unknown, owner to find"
+  - "2026-11-02: unverified: source mod of the AnimalEquipment integration unknown (guard Owlchemist.AnimalGear.Equipment, upstream id, in no installed mod; Apparel_SmallAnimal* defs in no Animal Gear family mod checked by Audit). Guard is inert when absent; fix the id if the mod shows up on disk"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-02
 protocols_read_sha: 3aab9cb0a46ad9091084fc47a249b97f4c8fd25e
