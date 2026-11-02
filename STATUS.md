@@ -5,7 +5,7 @@ repo: Rimworld-Red-Wolves-Renew
 remote: https://github.com/vbardales/Rimworld-Red-Wolves-Renew.git
 visibility: public
 detached: yes
-workflow_stage: makeSources
+workflow_stage: code[1.0.0]
 licence: open
 licence_at: "2026-11-02: upstream LICENSE is MIT (Ryan Schneider, 2020), confirmed on RadHazard/RimworldRedWolves (spdx MIT); LICENSE and ATTRIBUTION.md carry it"
 upstream_mod_remotes:
@@ -19,10 +19,9 @@ workshop: 3811403044
 published: yes
 tested_on: never
 remaining:
-  - "2026-11-02: defect: 2.e Art/Preview-source.png palette ok (2 families, Vmean 0.339) but four wolves with readable faces (max one) and a painterly render with lighting gradients; owner decides, session never regenerates"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-02
-protocols_read_sha: 5ebdd5bf0854413626432a9873694bffaed51495
+protocols_read_sha: 72aa47f6a2d697aabdaf7c56276e3cc6f58291c2
 ---
 
 # Red Wolves Renew: status
