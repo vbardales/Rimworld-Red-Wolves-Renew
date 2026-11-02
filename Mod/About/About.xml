@@ -12,9 +12,9 @@
   <loadBefore>
     <li>SamBucher.ADogSaidAnimalProsthetics2</li>
   </loadBefore>
-  <description>Pausbrak's Red Wolves, brought forward to RimWorld 1.6. A smaller, shyer wolf, russet-coated, driven extinct on Earth in the 21st century and cloned back in the 22nd.
+  <description>Pausbrak's Red Wolves, brought forward to the latest RimWorld version. A smaller, shyer wolf, russet-coated, driven extinct on Earth in the 21st century and cloned back in the 22nd.
 
-I am not the author of this mod. The animal, the textures and the writing are Pausbrak's - all I did was declare it for 1.6 and check that nothing in it had broken. Credit goes to them; mistakes in the update are mine. If they come back to it, or ask me to take this down, I will.
+I am not the author of this mod. The animal, the textures and the writing are Pausbrak's - all I did was declare it for the latest RimWorld version and check that nothing in it had broken. Credit goes to them; mistakes in the update are mine. If they come back to it, or ask me to take this down, I will.
 
 Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2014889466 - source at https://github.com/RadHazard/RimworldRedWolves, last touched December 2022.
 
@@ -31,9 +31,9 @@ Integrations, each loading only if you have the mod it targets
 - Pawnmorpher - a red wolf morph, with its own mutations, memories and backstories.
 - Animal Gear and Animal Equipment - sweaters, scarves, flak and plate cut for a red wolf.
 
-What changed in the 1.6 update
+What changed in the update
 
-Nothing, and that is worth saying plainly. The animal declares no wildness of its own, so it inherits the vanilla wolf's, which moved to a stat correctly on its own. It already used the game's own alternateGraphics for its coats rather than a third-party variants assembly. Its defs are byte for byte the ones Pausbrak shipped for 1.4. All this update does is declare 1.6 and carry the four integrations across with the load conditions the author wrote for them.
+Nothing, and that is worth saying plainly. The animal declares no wildness of its own, so it inherits the vanilla wolf's, which moved to a stat correctly on its own. It already used the game's own alternateGraphics for its coats rather than a third-party variants assembly. Its defs are byte for byte the ones Pausbrak shipped for 1.4. All this update does is declare the latest RimWorld version and carry the four integrations across with the load conditions the author wrote for them.
 
 No balance value was changed.
 
