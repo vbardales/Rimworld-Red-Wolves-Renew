@@ -7,7 +7,7 @@ packageId:    nelim.redwolves
 repo:         Rimworld-Red-Wolves-Renew
 visibility:   public
 detached:     no
-stage:
+workflow_stage: setupRepo
 licence:      open
 licence_at:   upstream LICENSE file, MIT
 dependencies: to check
@@ -15,9 +15,13 @@ showcase:     none
 tested_on:
 workshop:
 remaining:
-  - unverified: never seen running
+  - "2026-11-02: defect: STATUS.md not from template (remote, settings_audit, upstream_mod_remotes missing), 1.h"
+  - "2026-11-02: defect: no git remote, no GitHub repo linked, 1.e/1.f"
+  - "2026-11-02: unverified: 1.a duplicate search and 1.b source/licence not recorded"
+  - "2026-11-02: defect: About.xml description names 1.6 (rimworld-version warning)"
+  - "2026-11-02: unverified: never seen running"
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-12, automatic sweep
+updated: 2026-11-02
 ---
 
 # Red Wolves Renew — status
