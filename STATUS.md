@@ -19,6 +19,8 @@ workshop: 3811403044
 published: yes
 tested_on: never
 remaining:
+  - "2026-11-02: defect: 4.f animal integrations missing: Nocturnal Animals, Dogs mate, Better Crossbreeding (ADS 2 done, in Addon_ADogSaid.xml); add guarded patches or record why each does not apply, owner decides"
+  - "2026-11-02: unverified: 4.a packageIds of tachyonite.pawnmorpher, tachyonite.pawnmorpherpublic, Owlchemist.AnimalGear.Equipment not checked against the mods, 4.d sort-load-order not run"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-02
 protocols_read_sha: 3aab9cb0a46ad9091084fc47a249b97f4c8fd25e
