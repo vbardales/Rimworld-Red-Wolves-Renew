@@ -19,6 +19,7 @@ workshop: 3811403044
 published: yes
 tested_on: never
 remaining:
+  - "2026-11-02: defect: 2.e Art/Preview-source.png palette ok (2 families, Vmean 0.339) but four wolves with readable faces (max one) and a painterly render with lighting gradients; owner decides, session never regenerates"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-02
 protocols_read_sha: 5ebdd5bf0854413626432a9873694bffaed51495
