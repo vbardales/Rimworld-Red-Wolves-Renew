@@ -4,7 +4,7 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
-## [1.0.0] — unreleased
+## [Unreleased]
 
 On release: create the `v1.0.0` tag and the matching GitHub release.
 
@@ -23,7 +23,7 @@ The shortest of these updates: the animal itself needed no change at all.
   one by one and guarded on the display name of A Dog Said 1. ADS 2 renamed every one of them, and
   ADS 1 is dead: the guard never matched, and had it matched the xpath would have selected nothing.
   The mod promised prosthetics for the red wolf and delivered none. It now adds the animal to ADS 2's
-  three category lists — `ADS_Cat1`, `ADS_Cat2`, `ADS_Cat3`, where `Wolf_Timber` sits — behind a
+  three category lists, `ADS_Cat1`, `ADS_Cat2`, `ADS_Cat3`, where `Wolf_Timber` sits, behind a
   `PatchOperationConditional` that stays silent when ADS 2 is absent.
 - **`About.xml` declares `loadBefore` on `SamBucher.ADogSaidAnimalProsthetics2`.** That mod copies
   its category lists onto the real surgery recipes once, at its own pass; a mod loaded after it
@@ -44,7 +44,7 @@ The shortest of these updates: the animal itself needed no change at all.
 its own, so the change that silently untamed most animal mods on 1.6 could not reach it; it already
 used vanilla `alternateGraphics` for its coats; and it lays no eggs. No balance value was changed.
 
-Three of the four integrations — Combat Extended, Pawnmorpher, Animal Gear — ship as they shipped
+Three of the four integrations, Combat Extended, Pawnmorpher, Animal Gear, ship as they shipped
 upstream; the fourth is rewritten above. None has been tested against a **running** 1.6 build of
 the mod it targets, only read against its files on disk. All four are inert while their target is
 absent.
