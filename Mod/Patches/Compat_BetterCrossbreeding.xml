@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Better Crossbreeding (DizzyEevee.BetterCrossbreeding, Workshop 3520675842).
+
+  Two halves, read from the mod and from the 1.6 assembly. Who may mate is decided by vanilla from the
+  MALE's race alone: JobGiver_Mate looks at the canCrossBreedWith list of the male's race. What is born is
+  decided by the mod, from a DZY.CrossBreeding.Extension on the MOTHER's PawnKindDef, keyed by the father's
+  kind. So a pair needs the list on the male's race AND the extension on the mother's kind, in both
+  directions.
+
+  The class is DZY.CrossBreeding (capital B) in the assembly; the mod's own Example/ writes
+  DZY.Crossbreeding, a type that does not exist. This file uses the assembly's spelling.
+
+  What this file decides (Audit ruling, 2026-11-02): the red wolf crosses with vanilla's timber wolf, each
+  way, and the pup is either parent's kind on a coin flip (Random). The pair has one animal of this mod, so
+  no pairing between two vanilla animals is made, and nothing with dogs.
+
+  Each list is created if the race has none and appended to if another mod made one: a plain Add on the
+  race would write a second canCrossBreedWith and silently replace the first. The extension is created only
+  when the kind does not carry one yet.
+
+  Everything sits in one PatchOperationFindMod on the display name, so without Better Crossbreeding this
+  file changes nothing and logs nothing. No load order is asked.
+-->
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Better Crossbreeding</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Wolf_Red"]/race/canCrossBreedWith</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="Wolf_Red"]/race/canCrossBreedWith</xpath>
+						<value>
+							<li>Wolf_Timber</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="Wolf_Red"]/race</xpath>
+						<value>
+							<canCrossBreedWith>
+								<li>Wolf_Timber</li>
+							</canCrossBreedWith>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Wolf_Timber"]/race/canCrossBreedWith</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="Wolf_Timber"]/race/canCrossBreedWith</xpath>
+						<value>
+							<li>Wolf_Red</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="Wolf_Timber"]/race</xpath>
+						<value>
+							<canCrossBreedWith>
+								<li>Wolf_Red</li>
+							</canCrossBreedWith>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/PawnKindDef[defName="Wolf_Red"]/modExtensions/li[@Class="DZY.CrossBreeding.Extension"]</xpath>
+					<nomatch Class="PatchOperationAddModExtension">
+						<xpath>Defs/PawnKindDef[defName="Wolf_Red"]</xpath>
+						<value>
+							<li Class="DZY.CrossBreeding.Extension">
+								<outcomes></outcomes>
+							</li>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="Wolf_Red"]/modExtensions/li[@Class="DZY.CrossBreeding.Extension"]/outcomes</xpath>
+					<value>
+						<Wolf_Timber>
+							<Random />
+						</Wolf_Timber>
+					</value>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/PawnKindDef[defName="Wolf_Timber"]/modExtensions/li[@Class="DZY.CrossBreeding.Extension"]</xpath>
+					<nomatch Class="PatchOperationAddModExtension">
+						<xpath>Defs/PawnKindDef[defName="Wolf_Timber"]</xpath>
+						<value>
+							<li Class="DZY.CrossBreeding.Extension">
+								<outcomes></outcomes>
+							</li>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="Wolf_Timber"]/modExtensions/li[@Class="DZY.CrossBreeding.Extension"]/outcomes</xpath>
+					<value>
+						<Wolf_Red>
+							<Random />
+						</Wolf_Red>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

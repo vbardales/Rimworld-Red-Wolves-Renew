@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Dogs mate (Continued), Mlie.DogsMate, Workshop 2441132298.
+
+  What it reads: Defs/CompatibleSpecies/Canidae.xml declares the Revolus.DogsMate.AnimalGroupDef "Wolf",
+  whose <pawnKinds> are Wolf_Arctic and Wolf_Timber. The mod only activates the crossings between kinds
+  that share a group. Its own compatibility patches for other mods (for example Patches/Khaydar.canids.xml)
+  append their kinds to the Wolf list, which is what this file does.
+
+  Why the red wolf goes in "Wolf": it is a variant of the timber wolf (ParentName ThingBaseWolf, same
+  pack-hunter body), and Wolf_Timber is in that group. It is not a dog, so not "Dog".
+
+  Guard: a PatchOperationConditional on the group def. Without Dogs mate the xpath selects nothing, no
+  nomatch is declared, and the operation reports success without logging. Not MayRequire: nothing reads
+  it on an Operation. No load order is needed, patches run once every def is loaded.
+-->
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/Revolus.DogsMate.AnimalGroupDef[defName="Wolf"]/pawnKinds</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/Revolus.DogsMate.AnimalGroupDef[defName="Wolf"]/pawnKinds</xpath>
+			<value>
+				<li>Wolf_Red</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>

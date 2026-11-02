@@ -15,6 +15,7 @@ The shortest of these updates: the animal itself needed no change at all.
 ### Added
 
 - Support for RimWorld 1.6.
+- **Dogs mate and Better Crossbreeding patches** (`Patches/Compat_DogsMate.xml`, `Patches/Compat_BetterCrossbreeding.xml`). The red wolf joins the "Wolf" group of Dogs mate beside the timber wolf, and crosses with the vanilla timber wolf each way under Better Crossbreeding, the pup being either parent's kind. Both are inert when the mod is absent. Nocturnal Animals needs nothing: the red wolf inherits the timber wolf's classification from `ThingBaseWolf`.
 - `LICENSE`, the upstream MIT notice, which is what MIT asks in exchange for redistribution.
 
 ### Changed
