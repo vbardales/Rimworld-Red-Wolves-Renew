@@ -24,10 +24,9 @@ remaining:
   - "2026-11-02: unverified: the game resolving {PAWN_gender} switches in thought and backstory descriptions, raw keys and clipping in game (playTests)"
   - "2026-11-03: unverified: upstream English token [PAWN_possesive] (typo) in the ForcedGeneral backstory: check in English in game (playTests); upstream typos left unchanged on purpose"
   - "2026-11-03: feature: Pickle suite (7.d) to build, owner agreed. NPT decided (2682e3): copy and rename the DalmatiansRenew steps into Tests/Pickle/Source with prefix \"Red Wolves Renew\", run Check-Steps and Generate-Steps, declare to NPT and TM. Plan: keep spawn, tame, name, trainings, info card stat, race reads, thing/kind labelled, crossing steps (DogsMate, BC extension); drop coats, butcher, rot, camera, removal. Features: standalone (EN+FR), pawnmorpher, ads2 (declared and wrong order), dogsmate, bettercrossbreeding; maps wsl-deps.*; dotnet 8.0.424 is installed. Scenarios A to L in TESTING.md. Not played: 7.d asks only for written suites"
-  - "2026-11-03: unverified: Tests/test_mod.py to be declared in scripts/LOCAL_SCRIPTS.md (Audit)"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-02
-protocols_read_sha: d17469c9c6e799a503821573de9ce2aa18e057d6
+protocols_read_sha: a3b5d069797ec957f24675ce649233074e4dc92d
 ---
 
 # Red Wolves Renew: status
