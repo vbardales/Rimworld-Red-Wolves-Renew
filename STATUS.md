@@ -18,6 +18,7 @@ dependencies: none
 workshop: 3811403044
 published: yes
 tested_on: never
+automated: "29 checks passed, 0 failed on 2026-11-03 at Mod/ revision 96d4e48 (Tests/test_mod.py, uv run --with lxml python Tests/test_mod.py); Check-ModBasics and Check-Translations PASS; Run-UnitTests not applicable (no code)"
 remaining:
   - "2026-11-02: unverified: source mod of the AnimalEquipment integration unknown (guard Owlchemist.AnimalGear.Equipment, upstream id, in no installed mod; Apparel_SmallAnimal* defs in no Animal Gear family mod checked by Audit). Guard is inert when absent; fix the id if the mod shows up on disk"
   - "2026-11-02: unverified: AlienRace.BackstoryDef keys (2 backstories) not provable by Check-DefInjected (type not resolved); Pawnmorph stagePatches keys are numeric indices into a list merged with the parent, in game only"
