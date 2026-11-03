@@ -5,7 +5,7 @@ repo: Rimworld-Red-Wolves-Renew
 remote: https://github.com/vbardales/Rimworld-Red-Wolves-Renew.git
 visibility: public
 detached: yes
-workflow_stage: writeTests[1.0.0]
+workflow_stage: playTests[1.0.0]
 licence: open
 licence_at: "2026-11-02: upstream LICENSE is MIT (Ryan Schneider, 2020), confirmed on RadHazard/RimworldRedWolves (spdx MIT); LICENSE and ATTRIBUTION.md carry it"
 upstream_mod_remotes:
@@ -28,7 +28,7 @@ remaining:
   - "2026-11-03: interim: the 12 local Pickle steps (Tests/Pickle/Source) stay until NPT promotes the extras (gender switches and stat equals stay local as sole consumer; operations steps follow the Dalmatians Renew migration); then delete the copies and re-run Check-Steps (Audit ruling)"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-03
-protocols_read_sha: a3b5d069797ec957f24675ce649233074e4dc92d
+protocols_read_sha: 2e5ab7ac86307bf3c840414a7d487c6a48c60ec1
 ---
 
 # Red Wolves Renew: status
