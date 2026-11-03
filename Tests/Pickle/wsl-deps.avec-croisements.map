@@ -1,0 +1,5 @@
+# Pass 7: Dogs mate AND Better Crossbreeding, then this mod. They do not exclude each other: both write
+# race.canCrossBreedWith, so this pass proves nothing is listed twice or replaced.
+Mlie.DogsMate 2441132298
+DizzyEevee.BetterCrossbreeding 3520675842
+nelim.redwolves path:RedWolvesRenew/Mod

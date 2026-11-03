@@ -12,3 +12,8 @@ Art/.render/
 desktop.ini
 Thumbs.db
 .DS_Store
+
+# Pickle build output, and the triage folders of fresh and red runs (proofs on disk only).
+build/
+Tests/Pickle/Inbox/
+Tests/Pickle/Parked/

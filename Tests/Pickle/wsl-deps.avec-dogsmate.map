@@ -1,0 +1,4 @@
+# Pass 5: Dogs mate (Continued), then this mod. No load order is asked by either side: both patches run
+# after every def is loaded. Dogs mate fills race.canCrossBreedWith at startup from its groups.
+Mlie.DogsMate 2441132298
+nelim.redwolves path:RedWolvesRenew/Mod

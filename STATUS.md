@@ -23,9 +23,9 @@ remaining:
   - "2026-11-02: unverified: AlienRace.BackstoryDef keys (2 backstories) not provable by Check-DefInjected (type not resolved); Pawnmorph stagePatches keys are numeric indices into a list merged with the parent, in game only"
   - "2026-11-02: unverified: the game resolving {PAWN_gender} switches in thought and backstory descriptions, raw keys and clipping in game (playTests)"
   - "2026-11-03: unverified: upstream English token [PAWN_possesive] (typo) in the ForcedGeneral backstory: check in English in game (playTests); upstream typos left unchanged on purpose"
-  - "2026-11-03: feature: Pickle suite (7.d) to build, owner agreed. NPT decided (2682e3): copy and rename the DalmatiansRenew steps into Tests/Pickle/Source with prefix \"Red Wolves Renew\", run Check-Steps and Generate-Steps, declare to NPT and TM. Plan: keep spawn, tame, name, trainings, info card stat, race reads, thing/kind labelled, crossing steps (DogsMate, BC extension); drop coats, butcher, rot, camera, removal. Features: standalone (EN+FR), pawnmorpher, ads2 (declared and wrong order), dogsmate, bettercrossbreeding; maps wsl-deps.*; dotnet 8.0.424 is installed. Scenarios A to L in TESTING.md. Not played: 7.d asks only for written suites"
+  - "2026-11-03: unverified: Pickle suite written, never played (7.d asks only for written suites; the first ticket is a playTests gesture). Things a first run may show: BiomeDef.CommonalityOfAnimal for the wild biomes, Pawnmorpher's hard dependencies for this game version (Humanoid Alien Races only is staged), whether the staging script sorts the wrong-order pass back into the right order (pass 4), the neutral gender segment of the switches, Pawnmorpher's own errors against no errors were logged"
   - "2026-11-02: unverified: never seen running"
-updated: 2026-11-02
+updated: 2026-11-03
 protocols_read_sha: a3b5d069797ec957f24675ce649233074e4dc92d
 ---
 
@@ -69,4 +69,4 @@ Check it with `scripts/Check-Status.ps1 -Mod RedWolvesRenew` (no ERROR).
 
 - Scenarios A to L written in `TESTING.md` (preconditions, actions, expected results; figures checked against the defs). `PUBLICATION.md` written (description block, dependencies, comments owed); gallery order and comments finish at `writeDocs`.
 - Automated: `Tests/test_mod.py`, `uv run --with lxml python Tests/test_mod.py`, 29 checks, all green on 2026-11-03 (XML, values, textures, About and LoadFolders, the real patches of ADS 2, Dogs mate, Better Crossbreeding and Combat Extended (the dead tools Replace was removed 2026-11-03) on fixtures with the target present and absent, and the A Dog Said predicate trap shown to fail). `Check-ModBasics` PASS, `Check-Translations` PASS, `Check-DefInjected` 0 errors. `Run-UnitTests.ps1` not applicable (no unit-test project, no code).
-- Pickle: not written (see `remaining`). Not applicable: no behaviour of a vanilla def is tested.
+- Pickle: suite written 2026-11-03 in `Tests/Pickle` (steps copied and cut from Dalmatians Renew, NPT ruling 2682e3): 6 features, 27 scenario blocks, 36 steps (`Docs/steps.md`), 7 pass maps, 9 launches (`Tests/Pickle/README.md`). `Check-Steps.ps1 -StepPrefix "Red Wolves Renew"` passes (136 step lines, each one step); the assembly builds with 0 warnings. Never played. Not written: coats, butcher and rot, camera, removal, Combat Extended, Animal Gear (offline only or nothing to prove).

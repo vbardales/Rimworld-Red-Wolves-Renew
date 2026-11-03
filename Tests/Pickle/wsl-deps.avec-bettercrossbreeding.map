@@ -1,0 +1,4 @@
+# Pass 6: Better Crossbreeding, then this mod. The mod's patch is guarded by the display name
+# "Better Crossbreeding" and asks for no load order.
+DizzyEevee.BetterCrossbreeding 3520675842
+nelim.redwolves path:RedWolvesRenew/Mod

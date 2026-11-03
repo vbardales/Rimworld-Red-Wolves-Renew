@@ -1,0 +1,5 @@
+# Pass 3: this mod, THEN A Dog Said... Animal Prosthetics 2, the order the mod declares with loadBefore.
+# Without the second line the staging script would place this mod after everything the overlay names,
+# which is the wrong order for this pass.
+nelim.redwolves path:RedWolvesRenew/Mod
+SamBucher.ADogSaidAnimalProsthetics2 3238353862

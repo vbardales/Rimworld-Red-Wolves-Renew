@@ -1,0 +1,6 @@
+# Pass 2: Humanoid Alien Races (Pawnmorpher's hard dependency for this game version), Pawnmorpher, then
+# this mod. The mod names Pawnmorpher in loadAfter, so it goes after it. The line for the mod itself
+# keeps it behind the overlay mods, whatever the staging script would otherwise do.
+erdelf.HumanoidAlienRaces 839005762
+tachyonite.pawnmorpherpublic 1786466855
+nelim.redwolves path:RedWolvesRenew/Mod

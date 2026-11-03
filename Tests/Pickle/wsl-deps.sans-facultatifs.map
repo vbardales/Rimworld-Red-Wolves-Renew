@@ -1,0 +1,3 @@
+# Pass 1: the mod, and nothing optional. This mod has no hard dependency, so the pass stages Pickle and
+# the mod under test and no other mod. The map names nothing on purpose: it says the pass is the bare one.
+# Selected with -DepMap wsl-deps.sans-facultatifs.map.
