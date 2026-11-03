@@ -23,6 +23,7 @@ remaining:
   - "2026-11-02: unverified: French review by Virginie (FRENCH_REVIEW.md, 17 rows flagged; neutral al forms checked by the owner with Alpheratz 2026-11-03, incertainæ corrected to incertan; ChatGPT page-1 review applied in part: title and ear text corrected, daltonienx replaced by daltonaire on the owner's Alpheratz check, 2026-11-03)"
   - "2026-11-02: unverified: AlienRace.BackstoryDef keys (2 backstories) not provable by Check-DefInjected (type not resolved); Pawnmorph stagePatches keys are numeric indices into a list merged with the parent, in game only"
   - "2026-11-02: unverified: the game resolving {PAWN_gender} switches in thought and backstory descriptions, raw keys and clipping in game (playTests)"
+  - "2026-11-03: unverified: upstream English token [PAWN_possesive] (typo) in the ForcedGeneral backstory: check in English in game (playTests); upstream typos left unchanged on purpose"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-02
 protocols_read_sha: f5204fe856d1247623f508eb566f01b782a087b8
