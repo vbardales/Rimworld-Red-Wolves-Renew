@@ -5,7 +5,7 @@ repo: Rimworld-Red-Wolves-Renew
 remote: https://github.com/vbardales/Rimworld-Red-Wolves-Renew.git
 visibility: public
 detached: yes
-workflow_stage: localize[1.0.0]
+workflow_stage: writeTests[1.0.0]
 licence: open
 licence_at: "2026-11-02: upstream LICENSE is MIT (Ryan Schneider, 2020), confirmed on RadHazard/RimworldRedWolves (spdx MIT); LICENSE and ATTRIBUTION.md carry it"
 upstream_mod_remotes:
@@ -25,7 +25,7 @@ remaining:
   - "2026-11-03: unverified: upstream English token [PAWN_possesive] (typo) in the ForcedGeneral backstory: check in English in game (playTests); upstream typos left unchanged on purpose"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-02
-protocols_read_sha: f5204fe856d1247623f508eb566f01b782a087b8
+protocols_read_sha: d17469c9c6e799a503821573de9ce2aa18e057d6
 ---
 
 # Red Wolves Renew: status
