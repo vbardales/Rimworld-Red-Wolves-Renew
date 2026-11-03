@@ -29,6 +29,7 @@ The shortest of these updates: the animal itself needed no change at all.
 - **`About.xml` declares `loadBefore` on `SamBucher.ADogSaidAnimalProsthetics2`.** That mod copies
   its category lists onto the real surgery recipes once, at its own pass; a mod loaded after it
   writes into a list nobody reads again.
+- **The description no longer promises Combat Extended "reworked tools".** The line now says what the patch applies: melee dodge, crit and parry chances for the red wolf.
 - **`LoadFolders.xml` rewritten for a single version.** The original arbitrated 1.1 through 1.4 and
   their conditional integrations; the folders have moved up out of `1.4/`. The two `IfModActive`
   conditions are Pausbrak's, unchanged, package ids included.

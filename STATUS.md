@@ -24,6 +24,7 @@ remaining:
   - "2026-11-02: unverified: the game resolving {PAWN_gender} switches in thought and backstory descriptions, raw keys and clipping in game (playTests)"
   - "2026-11-03: unverified: upstream English token [PAWN_possesive] (typo) in the ForcedGeneral backstory: check in English in game (playTests); upstream typos left unchanged on purpose"
   - "2026-11-03: unverified: Pickle suite written, never played (7.d asks only for written suites; the first ticket is a playTests gesture). Things a first run may show: BiomeDef.CommonalityOfAnimal for the wild biomes, Pawnmorpher's hard dependencies for this game version (Humanoid Alien Races only is staged), whether the staging script sorts the wrong-order pass back into the right order (pass 4), the neutral gender segment of the switches, Pawnmorpher's own errors against no errors were logged"
+  - "2026-11-03: interim: the 12 local Pickle steps (Tests/Pickle/Source) stay until NPT promotes the extras (gender switches and stat equals stay local as sole consumer; operations steps follow the Dalmatians Renew migration); then delete the copies and re-run Check-Steps (Audit ruling)"
   - "2026-11-02: unverified: never seen running"
 updated: 2026-11-03
 protocols_read_sha: a3b5d069797ec957f24675ce649233074e4dc92d
