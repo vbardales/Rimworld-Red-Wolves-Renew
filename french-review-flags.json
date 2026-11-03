@@ -13,7 +13,7 @@
   "EtherRedWolfEar.stagePatches.6.values.description": "Numeric index, same caveat as the muzzle (6 inherited patches).",
   "EtherRedWolfTail.stagePatches.6.values.description": "Numeric index, same caveat as the muzzle (6 inherited patches).",
   "EtherRedWolfEye.stagePatches.2.values.description": "Numeric index, same caveat as the muzzle (2 inherited patches).",
-  "EtherRedWolfEye.stagePatches.4.values.description": "Switch for 'daltonien' (neutral form 'daltonienx' not checked against the al system).",
+  "EtherRedWolfEye.stagePatches.4.values.description": "Switch for 'daltonien' (neutral form 'daltonaire', validated by Virginie with Alpheratz, 2026-11-03).",
   "EtherRedWolfEar.stagePatches.9.values.description": "Switches for 'nerveux' and 'incertain' (neutral forms -x and -æ).",
   "EtherRedWolfEar.description": "English '(un)fortunate pawn' rewritten as 'une personne, pour son bonheur ou son malheur' (no pawn here, epicene).",
   "EtherRedWolfMuzzle.description": "'this pawn' written 'la personne' (no pawn gender available here)."
