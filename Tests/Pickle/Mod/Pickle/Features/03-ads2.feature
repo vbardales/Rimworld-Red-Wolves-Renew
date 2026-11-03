@@ -9,6 +9,7 @@
 # The effect lives in a list another mod builds while the game loads, and the failure is silent: no
 # error, no warning, only operations that are not there.
 
+@requires:nelim.pickletools.deffields
 @requires:SamBucher.ADogSaidAnimalProsthetics2
 Feature: The red wolf beside A Dog Said 2, in the declared load order
 
@@ -19,7 +20,7 @@ Feature: The red wolf beside A Dog Said 2, in the declared load order
   Scenario: the red wolf is offered the same operations as the timber wolf
     Then Red Wolves Renew "Wolf_Timber" offers more operations than "Rat"
     And Red Wolves Renew "Wolf_Red" offers more operations than "Rat"
-    And Red Wolves Renew "Wolf_Red" offers the same operations as "Wolf_Timber"
+    And Nelim's Pickle Tools: the surgery recipes of the race "Wolf_Red" match those of the race "Wolf_Timber"
 
   Scenario: loading the colony logs nothing from this mod
     Given the save "test-colony" is loaded

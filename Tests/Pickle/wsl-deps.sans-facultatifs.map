@@ -1,3 +1,6 @@
 # Pass 1: the mod, and nothing optional. This mod has no hard dependency, so the pass stages Pickle and
 # the mod under test and no other mod. The map names nothing on purpose: it says the pass is the bare one.
 # Selected with -DepMap wsl-deps.sans-facultatifs.map.
+# Shared steps of Nelim's Pickle Tools (PickleTools 813dc0f): def steps, and animal steps (ColonistRace), staged in every pass.
+nelim.pickletools.deffields path:PickleTools/DefFieldSteps/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod

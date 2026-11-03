@@ -17,6 +17,7 @@
 #
 # This is the one pass that steps outside the supported configuration on purpose.
 
+@requires:nelim.pickletools.deffields
 @requires:SamBucher.ADogSaidAnimalProsthetics2
 Feature: The red wolf beside A Dog Said 2, in the wrong load order
 

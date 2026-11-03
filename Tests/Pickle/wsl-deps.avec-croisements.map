@@ -3,3 +3,6 @@
 Mlie.DogsMate 2441132298
 DizzyEevee.BetterCrossbreeding 3520675842
 nelim.redwolves path:RedWolvesRenew/Mod
+# Shared steps of Nelim's Pickle Tools (PickleTools 813dc0f): def steps, and animal steps (ColonistRace), staged in every pass.
+nelim.pickletools.deffields path:PickleTools/DefFieldSteps/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod

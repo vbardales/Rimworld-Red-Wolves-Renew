@@ -13,20 +13,21 @@
 # Not asserted: the numeric stagePatches keys of the French mutation texts. They point into a list
 # merged with Pawnmorpher's, so what they land on is a person's reading of an open health tab.
 
+@requires:nelim.pickletools.deffields
 @requires:tachyonite.pawnmorpherpublic
 Feature: The red wolf morph beside Pawnmorpher
 
   Scenario: the Pawnmorpher folder loaded and every kind of def of it exists
     Then mod "tachyonite.pawnmorpherpublic" is loaded
     And mod "erdelf.HumanoidAlienRaces" is loaded
-    And Red Wolves Renew the def "RedWolfMorph" of type "Pawnmorph.MorphDef" comes from the mod "nelim.redwolves"
-    And Red Wolves Renew the def "PawnmorphRedWolfTF" of type "Verse.HediffDef" comes from the mod "nelim.redwolves"
-    And Red Wolves Renew the def "PawnmorphRedWolfTFPartial" of type "Verse.HediffDef" comes from the mod "nelim.redwolves"
-    And Red Wolves Renew the def "EtherRedWolfMuzzle" of type "Verse.HediffDef" comes from the mod "nelim.redwolves"
-    And Red Wolves Renew the def "RedWolfTransformationMemory" of type "RimWorld.ThoughtDef" comes from the mod "nelim.redwolves"
-    And Red Wolves Renew the def "RedWolfRevertedMemory" of type "RimWorld.ThoughtDef" comes from the mod "nelim.redwolves"
-    And Red Wolves Renew the def "RedwolfmorphConservationVolunteerGeneral" of type "RimWorld.BackstoryDef" comes from the mod "nelim.redwolves"
-    And Red Wolves Renew the def "RedwolfmorphConservationForcedGeneral" of type "RimWorld.BackstoryDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "RedWolfMorph" of type "Pawnmorph.MorphDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "PawnmorphRedWolfTF" of type "HediffDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "PawnmorphRedWolfTFPartial" of type "HediffDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "EtherRedWolfMuzzle" of type "HediffDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "RedWolfTransformationMemory" of type "ThoughtDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "RedWolfRevertedMemory" of type "ThoughtDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "RedwolfmorphConservationVolunteerGeneral" of type "AlienRace.BackstoryDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "RedwolfmorphConservationForcedGeneral" of type "AlienRace.BackstoryDef" comes from the mod "nelim.redwolves"
 
   Scenario: loading the colony logs nothing from this mod
     Given the save "test-colony" is loaded
@@ -51,11 +52,11 @@ Feature: The red wolf morph beside Pawnmorpher
   @french
   Scenario: the morph, its hediffs and a mutation read in French
     Then Red Wolves Renew this pass runs in French
-    And Red Wolves Renew the def "RedWolfMorph" of type "Pawnmorph.MorphDef" is labelled "morphe de loup rouge"
+    And Nelim's Pickle Tools: def "RedWolfMorph" of type "Pawnmorph.MorphDef" field "label" is "morphe de loup rouge"
     And Red Wolves Renew the def "RedWolfMorph" of type "Pawnmorph.MorphDef" has a description beginning "Comme leurs équivalents sauvages"
-    And Red Wolves Renew the def "PawnmorphRedWolfTF" of type "Verse.HediffDef" is labelled "morphe de loup rouge"
-    And Red Wolves Renew the def "PawnmorphRedWolfTFPartial" of type "Verse.HediffDef" is labelled "morphe partiel de loup rouge"
-    And Red Wolves Renew the def "EtherRedWolfMuzzle" of type "Verse.HediffDef" is labelled "museau de loup rouge"
+    And Nelim's Pickle Tools: def "PawnmorphRedWolfTF" of type "HediffDef" field "label" is "morphe de loup rouge"
+    And Nelim's Pickle Tools: def "PawnmorphRedWolfTFPartial" of type "HediffDef" field "label" is "morphe partiel de loup rouge"
+    And Nelim's Pickle Tools: def "EtherRedWolfMuzzle" of type "HediffDef" field "label" is "museau de loup rouge"
 
   @french
   Scenario Outline: the backstory with a switch resolves to the form of the colonist

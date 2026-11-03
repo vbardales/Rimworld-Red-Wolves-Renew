@@ -10,29 +10,30 @@
 # What is NOT played here: a pregnancy through to a birth. The mod keeps a per-save dictionary of
 # fathers, so it would need a save and a reload.
 
+@requires:nelim.pickletools.deffields
 @requires:DizzyEevee.BetterCrossbreeding
 Feature: The red wolf beside Better Crossbreeding
 
-  Scenario: the red wolf and the timber wolf seek each other, once
+  Scenario: the red wolf and the timber wolf seek each other
     Then mod "DizzyEevee.BetterCrossbreeding" is loaded
-    And Red Wolves Renew the male "Wolf_Red" lists "Wolf_Timber" once
-    And Red Wolves Renew the male "Wolf_Timber" lists "Wolf_Red" once
+    And Nelim's Pickle Tools: the race "Wolf_Red" lists "Wolf_Timber" as a crossbreeding partner
+    And Nelim's Pickle Tools: the race "Wolf_Timber" lists "Wolf_Red" as a crossbreeding partner
 
   Scenario: each mother has a coin-flip outcome for the other kind
-    Then Red Wolves Renew the mother kind "Wolf_Red" carries one Better Crossbreeding extension
-    And Red Wolves Renew the mother kind "Wolf_Timber" carries one Better Crossbreeding extension
-    And Red Wolves Renew the mother kind "Wolf_Red" has the outcome Random when the father kind is "Wolf_Timber"
-    And Red Wolves Renew the mother kind "Wolf_Timber" has the outcome Random when the father kind is "Wolf_Red"
+    Then Nelim's Pickle Tools: the pawn kind "Wolf_Red" carries one Better Crossbreeding extension
+    And Nelim's Pickle Tools: the pawn kind "Wolf_Timber" carries one Better Crossbreeding extension
+    And Nelim's Pickle Tools: a "Wolf_Red" mother answers a "Wolf_Timber" father with Random
+    And Nelim's Pickle Tools: a "Wolf_Timber" mother answers a "Wolf_Red" father with Random
 
   Scenario: this patch paired the red wolf with no dog
-    Then Red Wolves Renew the male "Wolf_Red" does not seek "Husky" to mate with
-    And Red Wolves Renew the mother kind "Wolf_Red" has no outcome when the father kind is "Husky"
+    Then Nelim's Pickle Tools: the race "Wolf_Red" does not list "Husky" as a crossbreeding partner
+    And Nelim's Pickle Tools: a "Wolf_Red" mother has no answer for a "Husky" father
 
   # Tagged: with Dogs mate loaded (pass 7) the vanilla wolves DO seek each other, by that mod's Wolf
   # group, which is not this patch's doing. Pass 7 excludes this tag; pass 6 plays it.
   @without-dogsmate
   Scenario: without Dogs mate the vanilla wolves do not seek each other
-    Then Red Wolves Renew the male "Wolf_Timber" does not seek "Wolf_Arctic" to mate with
+    Then Nelim's Pickle Tools: the race "Wolf_Timber" does not list "Wolf_Arctic" as a crossbreeding partner
 
   Scenario: loading the colony logs nothing from this mod
     Given the save "test-colony" is loaded

@@ -109,13 +109,13 @@ project, no code).
 
 ## Pickle
 
-Written 2026-11-03, **never played**: `Tests/Pickle/` (README.md says how, `Docs/steps.md` lists the 36 steps).
-The steps are the Dalmatians Renew ones, copied and cut (NPT ruling). Six features, seven passes, nine launches:
+Written 2026-11-03, **never played**: `Tests/Pickle/` (README.md says how, `Docs/steps.md` lists the 12 local steps).
+The animal and def steps are Nelim's Pickle Tools' (PickleTools 813dc0f; Virginie ruled against copying Dalmatians steps). Six features, seven passes, nine launches:
 no optional mod (A, B, D2, L in English and French), Pawnmorpher (G and L, the gender switches resolved for a male,
 a female and a neutral colonist), A Dog Said 2 in the declared and in the wrong order (D1, D3), Dogs mate (E),
 Better Crossbreeding (F), and both crossing mods together. Not written: C (the coats, owner's decision), H and I
-(offline only), J (a content mod, nothing to prove), K. `scripts/Check-Steps.ps1` passes: 6 features, 36 patterns,
-136 step lines, each resolving to one step.
+(offline only), J (a content mod, nothing to prove), K. `scripts/Check-Steps.ps1` passes: 6 features, 12 local patterns,
+137 step lines, each resolving to one step.
 
 ## What cannot be tested offline
 

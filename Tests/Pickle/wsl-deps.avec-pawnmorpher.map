@@ -4,3 +4,6 @@
 erdelf.HumanoidAlienRaces 839005762
 tachyonite.pawnmorpherpublic 1786466855
 nelim.redwolves path:RedWolvesRenew/Mod
+# Shared steps of Nelim's Pickle Tools (PickleTools 813dc0f): def steps, and animal steps (ColonistRace), staged in every pass.
+nelim.pickletools.deffields path:PickleTools/DefFieldSteps/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod

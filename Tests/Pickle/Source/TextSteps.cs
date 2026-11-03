@@ -42,8 +42,11 @@ namespace RedWolvesRenew.PickleSteps
 
         private static string BackstoryText(PickleContext ctx, string defName, string gender)
         {
-            var def = DefDatabase<BackstoryDef>.GetNamedSilentFail(defName);
-            ctx.Require(def != null, $"no BackstoryDef named '{defName}' is loaded in this pass");
+            // The defs are written as AlienRace.BackstoryDef; the game's own type lookup finds it without
+            // this assembly referencing Humanoid Alien Races, and the cast says it is a vanilla backstory too.
+            var type = GenTypes.GetTypeInAnyAssembly("AlienRace.BackstoryDef") ?? typeof(BackstoryDef);
+            var def = GenDefDatabase.GetDefSilentFail(type, defName, false) as BackstoryDef;
+            ctx.Require(def != null, $"no backstory named '{defName}' (a {type.FullName}) is loaded in this pass");
             var pawn = Colonist(ctx, gender);
             try { return def.FullDescriptionFor(pawn).Resolve(); }
             finally { pawn.Discard(true); }

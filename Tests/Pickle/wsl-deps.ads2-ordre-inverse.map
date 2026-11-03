@@ -2,3 +2,6 @@
 # Only feature 04 is played in it. Not a supported configuration.
 SamBucher.ADogSaidAnimalProsthetics2 3238353862
 nelim.redwolves path:RedWolvesRenew/Mod
+# Shared steps of Nelim's Pickle Tools (PickleTools 813dc0f): def steps, and animal steps (ColonistRace), staged in every pass.
+nelim.pickletools.deffields path:PickleTools/DefFieldSteps/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod

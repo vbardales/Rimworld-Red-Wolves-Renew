@@ -10,19 +10,21 @@
 # The effect lives in a list another mod builds while the game loads, and the failure is silent: no
 # error, no warning, a wolf that simply never courts the timber wolf.
 
+@requires:nelim.pickletools.deffields
 @requires:Mlie.DogsMate
 Feature: The red wolf beside Dogs mate (Continued)
 
   Scenario: the red wolf courts the vanilla wolves and they court it
     Then mod "Mlie.DogsMate" is loaded
-    And Red Wolves Renew the male "Wolf_Red" will seek "Wolf_Timber" to mate with
-    And Red Wolves Renew the male "Wolf_Red" will seek "Wolf_Arctic" to mate with
-    And Red Wolves Renew the male "Wolf_Timber" will seek "Wolf_Red" to mate with
-    And Red Wolves Renew the male "Wolf_Arctic" will seek "Wolf_Red" to mate with
+    And Nelim's Pickle Tools: the pawn kind "Wolf_Red" is in the mating group "Wolf"
+    And Nelim's Pickle Tools: the race "Wolf_Red" lists "Wolf_Timber" as a crossbreeding partner
+    And Nelim's Pickle Tools: the race "Wolf_Red" lists "Wolf_Arctic" as a crossbreeding partner
+    And Nelim's Pickle Tools: the race "Wolf_Timber" lists "Wolf_Red" as a crossbreeding partner
+    And Nelim's Pickle Tools: the race "Wolf_Arctic" lists "Wolf_Red" as a crossbreeding partner
 
   Scenario: the red wolf is not put among dogs
-    Then Red Wolves Renew the male "Wolf_Red" does not seek "Husky" to mate with
-    And Red Wolves Renew the male "Husky" does not seek "Wolf_Red" to mate with
+    Then Nelim's Pickle Tools: the race "Wolf_Red" does not list "Husky" as a crossbreeding partner
+    And Nelim's Pickle Tools: the race "Husky" does not list "Wolf_Red" as a crossbreeding partner
 
   Scenario: loading the colony logs nothing from this mod
     Given the save "test-colony" is loaded
