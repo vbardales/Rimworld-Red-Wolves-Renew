@@ -26,7 +26,7 @@ No hard dependency. Every integration is optional and inert when its mod is abse
 | `doesn't correspond to any field` | A field of the race or kind def that 1.6 no longer has. Expected count naming `Wolf_Red`: zero. |
 | `Could not load UnityEngine.Texture2D` / `Failed to find any textures at` | A `texPath` with nothing behind it. |
 | `Could not find parent node named` | `ThingBaseWolf` or `AnimalKindBaseWolf` gone from Core. |
-| `Patch operation` ... `failed` | A patch whose xpath selected nothing. Expected from this mod without Combat Extended: zero. With Combat Extended: one, the `tools` replace (see "Known limits"). |
+| `Patch operation` ... `failed` | A patch whose xpath selected nothing. Expected from this mod without Combat Extended: zero. With Combat Extended: zero. |
 | `Cannot find` ... `Def named` on `Wolf_Red` or `RedWolf` | A DefInjected key whose def is absent: a French file placed outside its load folder. Expected: zero. |
 
 ## Scenarios
@@ -123,9 +123,8 @@ upstream shifts them); the upstream token `[PAWN_possesive]` in the English of o
 
 ## Known limits
 
-- **Combat Extended `tools`.** `Wolf_Red` declares no `<tools>` of its own (inherited from `ThingBaseWolf`), so
-  the `PatchOperationReplace` on `Defs/ThingDef[defName="Wolf_Red"]/tools` selects nothing: the reworked tools of
-  the original never applied. The statBases patch does. Not fixed, owner to decide (see `STATUS.md`).
+- **Combat Extended `tools`.** The original's replace of `Wolf_Red/tools` selected nothing (the def declares no tools of
+  its own) and was removed on 2026-11-03; the melee chances of the same patch are kept.
 - **Animal Gear.** The guard `Owlchemist.AnimalGear.Equipment` is the original author's; no installed mod
   matches it, and the eight `Apparel_SmallAnimal*` defs that the patches target are in no Animal Gear mod
   checked. The folder is inert when absent.

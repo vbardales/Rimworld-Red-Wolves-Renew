@@ -33,7 +33,7 @@ the `LoadFolders.xml` conditions Pausbrak wrote, the two patches through a guard
 | Integration | What it adds |
 |---|---|
 | A Dog Said 2 | Prosthetics and bionics for the red wolf, in all three of its categories, where the timber wolf sits. **Rewritten**: Pausbrak's version named ADS 1's recipes and had stopped working. |
-| Combat Extended | Reworked tools. |
+| Combat Extended | Melee dodge, crit and parry chances. |
 | Pawnmorpher | A red wolf morph, with its own mutations, hediffs, memories and backstories, and the body-part textures that go with them. |
 | Animal Gear / Animal Equipment | Sweaters, scarves, flak and plate cut for a red wolf. |
 

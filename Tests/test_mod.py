@@ -191,14 +191,14 @@ check("Better Crossbreeding: the class is spelled DZY.CrossBreeding.Extension (c
 check("Better Crossbreeding absent: the document is unchanged",
       etree.tostring(run_patch(bc, absent, mod_present=False).getroot()) == etree.tostring(etree.fromstring(absent)))
 
-# 8. Combat Extended: the statBases patch applies. Known limit recorded in TESTING.md: Wolf_Red declares
-#    no <tools> of its own (inherited from ThingBaseWolf), so the PatchOperationReplace on tools selects nothing.
+# 8. Combat Extended: the statBases patch applies; the dead tools Replace of the original was removed.
 ce = MOD + "/Patches/Addon_CombatExtended.xml"
 ce_doc = b"<Defs><ThingDef><defName>Wolf_Red</defName><statBases/></ThingDef></Defs>"
 d = run_patch(ce, ce_doc)
 check("Combat Extended: melee chances added to Wolf_Red statBases", len(d.xpath("/Defs/ThingDef[defName='Wolf_Red']/statBases/MeleeDodgeChance")) == 1)
-check("Combat Extended: the race def declares no tools of its own (the Replace has nothing to select)",
-      not races.xpath("/Defs/ThingDef[defName='Wolf_Red']/tools"))
+check("Combat Extended: the patch no longer replaces tools (the race declares none of its own)",
+      "PatchOperationReplace" not in open(ce, encoding="utf-8").read()
+      and not races.xpath("/Defs/ThingDef[defName='Wolf_Red']/tools"))
 
 print()
 print(("%d check(s) failed" % len(failures)) if failures else "all checks passed")

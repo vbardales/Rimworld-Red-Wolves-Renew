@@ -23,7 +23,6 @@ remaining:
   - "2026-11-02: unverified: AlienRace.BackstoryDef keys (2 backstories) not provable by Check-DefInjected (type not resolved); Pawnmorph stagePatches keys are numeric indices into a list merged with the parent, in game only"
   - "2026-11-02: unverified: the game resolving {PAWN_gender} switches in thought and backstory descriptions, raw keys and clipping in game (playTests)"
   - "2026-11-03: unverified: upstream English token [PAWN_possesive] (typo) in the ForcedGeneral backstory: check in English in game (playTests); upstream typos left unchanged on purpose"
-  - "2026-11-03: defect: Combat Extended tools Replace selects nothing (Wolf_Red declares no tools of its own, inherited from ThingBaseWolf); the CE melee tools of the original never applied; owner to decide"
   - "2026-11-03: unverified: Pickle suites (7.d) not written: waiting for NPT on shared steps; scenarios A to L in TESTING.md"
   - "2026-11-03: unverified: Tests/test_mod.py to be declared in scripts/LOCAL_SCRIPTS.md (Audit)"
   - "2026-11-02: unverified: never seen running"
@@ -70,5 +69,5 @@ Check it with `scripts/Check-Status.ps1 -Mod RedWolvesRenew` (no ERROR).
 ## Tests (2026-11-03, TESTING.md, PUBLICATION.md)
 
 - Scenarios A to L written in `TESTING.md` (preconditions, actions, expected results; figures checked against the defs). `PUBLICATION.md` written (description block, dependencies, comments owed); gallery order and comments finish at `writeDocs`.
-- Automated: `Tests/test_mod.py`, `uv run --with lxml python Tests/test_mod.py`, 29 checks, all green on 2026-11-03 (XML, values, textures, About and LoadFolders, the real patches of ADS 2, Dogs mate, Better Crossbreeding and Combat Extended on fixtures with the target present and absent, and the A Dog Said predicate trap shown to fail). `Check-ModBasics` PASS, `Check-Translations` PASS, `Check-DefInjected` 0 errors. `Run-UnitTests.ps1` not applicable (no unit-test project, no code).
+- Automated: `Tests/test_mod.py`, `uv run --with lxml python Tests/test_mod.py`, 29 checks, all green on 2026-11-03 (XML, values, textures, About and LoadFolders, the real patches of ADS 2, Dogs mate, Better Crossbreeding and Combat Extended (the dead tools Replace was removed 2026-11-03) on fixtures with the target present and absent, and the A Dog Said predicate trap shown to fail). `Check-ModBasics` PASS, `Check-Translations` PASS, `Check-DefInjected` 0 errors. `Run-UnitTests.ps1` not applicable (no unit-test project, no code).
 - Pickle: not written (see `remaining`). Not applicable: no behaviour of a vanilla def is tested.

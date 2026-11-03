@@ -19,7 +19,7 @@ Everything the 1.4 folder holds, plus the shared assets at the mod root.
 |---|---|
 | `Defs/Races_Animal_RedWolf.xml` | `1.4/Defs/`, **byte for byte** |
 | `Patches/Addon_ADogSaid.xml` | `1.4/Patches/`, **rewritten**, see below |
-| `Patches/Addon_CombatExtended.xml` | `1.4/Patches/`, unchanged |
+| `Patches/Addon_CombatExtended.xml` | `1.4/Patches/`, **trimmed**: the `tools` replace selected nothing and was removed, see below |
 | `ModIntegrations/Pawnmorpher/` | `1.4/ModIntegrations/`, unchanged |
 | `ModIntegrations/AnimalEquipment/` | `1.4/ModIntegrations/`, unchanged |
 | `Textures/Things/Wolf_Red/*` | unchanged, twelve files |

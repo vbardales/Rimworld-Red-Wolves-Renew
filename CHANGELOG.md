@@ -35,6 +35,8 @@ The shortest of these updates: the animal itself needed no change at all.
 
 ### Removed
 
+- **The Combat Extended `tools` replace.** It targeted `Wolf_Red/tools`, which the def does not declare (the tools are inherited from `ThingBaseWolf`), so it never applied. The melee chances of the same patch are kept.
+
 - `Textures/Things/Wolf_Red/Wolf_Red_SkinSet.xml`, the configuration file for a third-party
   animal-variants assembly. The mod stopped using it at 1.1, when the four coats moved to the
   game's own `alternateGraphics`.
