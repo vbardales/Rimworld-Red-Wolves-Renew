@@ -41,7 +41,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## AI-GENERATED
 
-The update work was done with the help of Claude (Anthropic): the patches, the French translation, the tests and the documentation. The preview and icon images were made by the owner with an image tool (name to confirm before publication).
+The update work was done with the help of Claude (Anthropic): the patches, the French translation, the tests and the documentation. The preview and icon images were made by the owner with DALL-E (OpenAI).
 
 ## THANKS
 
