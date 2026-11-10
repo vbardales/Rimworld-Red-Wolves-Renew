@@ -33,7 +33,7 @@ remaining:
   - "2026-11-02: unverified: never seen running"
 workshop_required_items: "n/a, no mandatory Workshop dependency (modDependencies empty)"
 updated: 2026-11-10
-protocols_read_sha: 409a3558069ff2cd86a4f7865826897b158fe959
+protocols_read_sha: 37653405fdfcbcb133967cfb5b343fcbab9fc749
 ---
 
 # Red Wolves Renew: status
