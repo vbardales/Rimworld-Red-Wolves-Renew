@@ -5,7 +5,7 @@ repo: Rimworld-Red-Wolves-Renew
 remote: https://github.com/vbardales/Rimworld-Red-Wolves-Renew.git
 visibility: public
 detached: yes
-workflow_stage: declareDependencies[1.0.0]
+workflow_stage: playTests[1.0.0]
 licence: open
 licence_at: "2026-11-02: upstream LICENSE is MIT (Ryan Schneider, 2020), confirmed on RadHazard/RimworldRedWolves (spdx MIT); LICENSE and ATTRIBUTION.md carry it"
 upstream_mod_remotes:
@@ -18,9 +18,9 @@ dependencies: none
 workshop: 3811403044
 published: yes
 tested_on: "2026-11-03 pickle 96d4e48 (Pickle only, no game by hand; pass 1 English and French, 3, 5, 6, 7 green)"
-automated: "29 checks passed, 0 failed on 2026-11-03 at Mod/ revision 96d4e48 (Tests/test_mod.py, uv run --with lxml python Tests/test_mod.py); Check-ModBasics and Check-Translations PASS; Run-UnitTests not applicable (no code)"
+automated: "29 checks passed, 0 failed on 2026-11-10 at Mod/ revision 3fd3a09 (Tests/test_mod.py, uv run --with lxml python Tests/test_mod.py); Check-ModBasics and Check-Translations PASS; Run-UnitTests not applicable (no code)"
 remaining:
-  - "2026-11-10: replay-audit moved the stage back to declareDependencies (4.b, 4.e, 4.g); closed same day at this commit (OptionalCompat.xml 6 entries, workshop_required_items n/a). Rerun /replay-audit: sections 5 to 8 not yet replayed, stage advance (4.h) follows the replay"
+  - "2026-11-10: replay-audit 2 (ledger .replays/RedWolvesRenew-20261110.tsv): sections 1 to 7 fulfilled, stage back at playTests. Open 8.a (Mod sha not frozen: three backstory fixes a07c2f8 to 3fd3a09), 8.c and 8.f (pass 2 queued 5d3e 9a1c; pass 3, 5, 6, 7 greens dated at 96d4e48), 8.g, 8.i, 8.k (TESTING.md scenarios not all played), 8.j (regression after the fixes), 8.l (no Docs/runs journal, tested_on old), 8.m (code_review_sha absent), 8.n. Owed: convert Tests/test_mod.py to the generated Tests/Test-Mod.ps1 + Rule-OwnValues.ps1 shape (AGENTS.md Mod tests shape), About description link WARN (Check-ModBasics)"
   - "2026-11-02: unverified: source mod of the AnimalEquipment integration unknown (guard Owlchemist.AnimalGear.Equipment, upstream id, in no installed mod; Apparel_SmallAnimal* defs in no Animal Gear family mod checked by Audit). Guard is inert when absent; fix the id if the mod shows up on disk"
   - "2026-11-10: DEFECT FIXED at a07c2f8: the 2 backstories were typed AlienRace.BackstoryDef, which HAR 1.6 no longer has (now AlienRace.AlienBackstoryDef; game log: Type AlienRace.BackstoryDef is not a Def type or could not be found); defs, French DefInjected folder and Pickle step renamed. Pass 2 at a07c2f8 then showed a SECOND defect (game log: ArgumentNullException loading <baseDescription>; HAR 1.6 and Pawnmorpher 1.6 use <description>): fixed at ea3a5f2 (defs and French keys). Pass 2 French at ea3a5f2 showed a THIRD defect (game log: ArgumentNullException in SkillGain.LoadDataFromXmlCustom: 1.6 reads <Skill>n</Skill>, the defs had <li><defName>): fixed at 3fd3a09. Pass 2 running on it: English 20261110-174321-384-5d3e (queued, stages the tree at start), French 20261110-174819-210-9a1c. Older note: Pawnmorph stagePatches keys are numeric indices into a list merged with the parent, in game only"
   - "2026-11-02: unverified: the game resolving {PAWN_gender} switches in thought and backstory descriptions, raw keys and clipping in game (playTests)"
@@ -33,7 +33,7 @@ remaining:
   - "2026-11-02: unverified: never seen running"
 workshop_required_items: "n/a, no mandatory Workshop dependency (modDependencies empty)"
 updated: 2026-11-10
-protocols_read_sha: 7bea5f3fff6113429ad6511c386b8c754c2074a5
+protocols_read_sha: 409a3558069ff2cd86a4f7865826897b158fe959
 ---
 
 # Red Wolves Renew: status
