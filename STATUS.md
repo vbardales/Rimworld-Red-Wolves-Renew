@@ -17,7 +17,7 @@ translation_fr: complete
 dependencies: none
 workshop: 3811403044
 published: yes
-tested_on: never
+tested_on: "2026-11-03 pickle 96d4e48 (Pickle only, no game by hand; pass 1 English and French, 3, 5, 6, 7 green)"
 automated: "29 checks passed, 0 failed on 2026-11-03 at Mod/ revision 96d4e48 (Tests/test_mod.py, uv run --with lxml python Tests/test_mod.py); Check-ModBasics and Check-Translations PASS; Run-UnitTests not applicable (no code)"
 remaining:
   - "2026-11-02: unverified: source mod of the AnimalEquipment integration unknown (guard Owlchemist.AnimalGear.Equipment, upstream id, in no installed mod; Apparel_SmallAnimal* defs in no Animal Gear family mod checked by Audit). Guard is inert when absent; fix the id if the mod shows up on disk"
@@ -26,10 +26,12 @@ remaining:
   - "2026-11-03: unverified: upstream English token [PAWN_possesive] (typo) in the ForcedGeneral backstory: check in English in game (playTests); upstream typos left unchanged on purpose"
   - "2026-11-03: unverified: Pickle suite written, never played (7.d asks only for written suites; the first ticket is a playTests gesture). Things a first run may show: BiomeDef.CommonalityOfAnimal for the wild biomes, Pawnmorpher's hard dependencies for this game version (Humanoid Alien Races only is staged), whether the staging script sorts the wrong-order pass back into the right order (pass 4), the neutral gender segment of the switches, Pawnmorpher's own errors against no errors were logged"
   - "2026-11-03: interim: the 12 local Pickle steps (Tests/Pickle/Source) stay until NPT promotes the extras (gender switches and stat equals stay local as sole consumer; operations steps follow the Dalmatians Renew migration); then delete the copies and re-run Check-Steps (Audit ruling)"
-  - "2026-11-03: pass 1 English GREEN (ticket 20261103-093835-192-cd3f, 6 of 6, evidence Tests/Pickle/Inbox/pass1-english; proves NPT ColonistRace and DefFieldSteps 813dc0f). Queued at 3afb571, priority 3, evidence Tests/Pickle/Inbox/<pass>: pass 1 French 20261103-094644-948-523e, pass 2 English 20261103-094645-748-ec8e, pass 2 French 20261103-094646-768-dace, pass 3 20261103-094648-053-51d2, pass 4 20261103-094649-185-90d0, pass 5 20261103-094650-579-3685, pass 6 20261103-094651-603-ba3d, pass 7 20261103-094652-303-e140. On each RUN_DONE: summary.json then junit.xml, triage; tell NPT the ids via the TM"
+  - "2026-11-10: pass results read (Mod/ revision 96d4e48). GREEN, kept minified in Tests/Pickle/Evidence: pass 1 English 6/6 (20261103-093835-192-cd3f), pass 1 French 6/6, pass 3 3/3, pass 6 5/5, pass 7 7/7 (pass 5 3/3 superseded by pass 7, deleted). RED, deleted after study: pass 2 English and French (1 scenario each, step 'def of type AlienRace.BackstoryDef comes from the mod' fails: DefFieldSteps does not resolve a non-Verse def type; tool limit, not a mod defect; ask NPT to resolve it, or drop the 2 backstory lines from 02-pawnmorpher.feature), pass 4 (A Dog Said 2 is loaded AFTER nelim.redwolves, so the game honours loadBefore and the wrong order cannot be staged: both scenarios void; retire 04-ads2-wrong-order.feature and its map, or ask NPT for a forced order). Still to play: the rest of pass 2 once the step is fixed"
+  - "2026-11-10: AUDIT 4.b/4.e/4.g: OptionalCompat.xml (one entry per optional target) is not in the repo; write it per docs/AUDIT.md 4.g. 6.f: FRENCH_REVIEW.md is the old name, regenerate TRANSLATION_REVIEW.md with scripts/Make-TranslationReview.ps1 (Check-Status INFO)"
+  - "2026-11-10: unverified: Art/Preview.config.json is rewritten uncommitted in the working tree (new schema, not by this session); Render-Preview.cjs fails: 'ModIcon-source.png has excessive transparent padding'. Render outputs reverted, nothing committed. Preview.png last committed 2026-11-02. Per AUDIT 2.d to 2.f (2026-11-10) the Preview is now made once at mountPreview from the accepted gallery"
   - "2026-11-02: unverified: never seen running"
-updated: 2026-11-03
-protocols_read_sha: 2e5ab7ac86307bf3c840414a7d487c6a48c60ec1
+updated: 2026-11-10
+protocols_read_sha: 7bea5f3fff6113429ad6511c386b8c754c2074a5
 ---
 
 # Red Wolves Renew: status
