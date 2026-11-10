@@ -1,4 +1,4 @@
-# Draft: issue for RimWorks/Rimworld-Pickle (not filed; Virginie posts it or says so)
+# Issue RimWorks/Rimworld-Pickle#83, filed 2026-11-10 (https://github.com/RimWorks/Rimworld-Pickle/issues/83); draft kept for reference
 
 **Title:** `test-colony` fixture aborts the game at the second colony load when Humanoid Alien Races and Pawnmorpher are active
 
