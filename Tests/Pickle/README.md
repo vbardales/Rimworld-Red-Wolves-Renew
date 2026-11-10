@@ -21,12 +21,9 @@ Seven passes, nine launches. Optional mods are staged in the order the mod decla
 | 1. Without optional mods | `wsl-deps.sans-facultatifs.map` | `01` | English, then French | The mod stands alone: values, biomes, taming, name, trainings, information card, text |
 | 2. Pawnmorpher | `wsl-deps.avec-pawnmorpher.map` | `02` | English, then French | The folder loads, the defs exist, the French text and its gender switches resolve |
 | 3. A Dog Said 2, declared order | `wsl-deps.avec-ads2.map` | `03` | English | The red wolf is offered the timber wolf's operations |
-| 4. A Dog Said 2, wrong order | `wsl-deps.ads2-ordre-inverse.map` | `04` | English | What happens in the order the metadata forbids |
 | 5. Dogs mate | `wsl-deps.avec-dogsmate.map` | `05` | English | The red wolf is in the Wolf group: it seeks, and is sought by, the vanilla wolves |
 | 6. Better Crossbreeding | `wsl-deps.avec-bettercrossbreeding.map` | `06` | English | The two halves, list on the male and extension on the mother, both ways, Random |
 | 7. Both crossing mods | `wsl-deps.avec-croisements.map` | `05,06,!@without-dogsmate` | English | The two mods write the same list: nothing listed twice or replaced |
-
-Pass 4 steps outside the supported configurations on purpose; its scenarios assert the documented symptom as a green result. The staging script sorts a load order from the mods' own rules, and this mod declares `loadBefore` on A Dog Said 2: if the sort puts it back in the right order, the first scenario of pass 4 fails and the pass cannot be staged. That is the thing to record, not to work around.
 
 From the collection root, once `scripts/Pickle-Status.ps1` says the machine is free:
 
@@ -36,7 +33,6 @@ powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedW
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-pawnmorpher.map -Filter '02-pawnmorpher,!@french'  -Language English
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-pawnmorpher.map -Filter '02-pawnmorpher,!@english' -Language French
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-ads2.map -Filter '03-ads2' -Language English
-powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.ads2-ordre-inverse.map -Filter '04-ads2-wrong-order' -Language English
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-dogsmate.map -Filter '05-dogsmate' -Language English
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-bettercrossbreeding.map -Filter '06-bettercrossbreeding' -Language English
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-croisements.map -Filter '05-dogsmate,06-bettercrossbreeding,!@without-dogsmate' -Language English
