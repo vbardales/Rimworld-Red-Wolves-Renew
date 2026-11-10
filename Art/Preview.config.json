@@ -8,7 +8,7 @@
     "description": "A smaller, shyer wolf. Cloned back from extinction."
   },
   "background": { "file": "Preview-source.png" },
-  "icon": { "file": "ModIcon-badge.png" },
+  "icon": { "file": "ModIcon-source.png" },
   "echo": { "file": "echo-concept.png" },
   "palette": {
     "veil": "#352B27",
