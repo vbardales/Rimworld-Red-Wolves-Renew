@@ -131,3 +131,7 @@ upstream shifts them); the upstream token `[PAWN_possesive]` in the English of o
   matches it, and the eight `Apparel_SmallAnimal*` defs that the patches target are in no Animal Gear mod
   checked. The folder is inert when absent.
 - **Numeric `stagePatches` keys**, as above.
+
+## Not applicable in Pickle: Pawnmorpher scenarios that need a colony (2026-11-10)
+
+Pawnmorpher plus Humanoid Alien Races cannot load Pickle's shared `test-colony` save (saved without both mods): the game aborts natively at the second colony load (Pickle tickets a348 and 1fcc, exit 134; Humanoid Alien Races alone loads it, ticket c291). Decision of Virginie, 2026-11-10: pass 2 keeps only the scenario that every Pawnmorpher def exists and loads (it needs no colony). Cut, and so not verified in game: the quiet log of the colony load, the English text of the morph and of the two backstories (including the upstream `[PAWN_possesive]` token), the French morph, hediffs and mutation texts, the gender switches of the two backstories and the six thoughts (male, female, neutral), and the unresolved numeric `stagePatches` keys. They stay `unverified` in `STATUS.md` until upstream Pickle can load a colony with both mods.

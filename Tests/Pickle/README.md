@@ -19,7 +19,7 @@ Seven passes, nine launches. Optional mods are staged in the order the mod decla
 | Pass | Map | Features | Language | What it establishes |
 | --- | --- | --- | --- | --- |
 | 1. Without optional mods | `wsl-deps.sans-facultatifs.map` | `01` | English, then French | The mod stands alone: values, biomes, taming, name, trainings, information card, text |
-| 2. Pawnmorpher | `wsl-deps.avec-pawnmorpher.map` | `02` | English, then French | The folder loads, the defs exist, the French text and its gender switches resolve |
+| 2. Pawnmorpher | `wsl-deps.avec-pawnmorpher.map` | `02` | English | The folder loads and every def of it exists (one scenario; the colony-bound ones are cut, see below) |
 | 3. A Dog Said 2, declared order | `wsl-deps.avec-ads2.map` | `03` | English | The red wolf is offered the timber wolf's operations |
 | 5. Dogs mate | `wsl-deps.avec-dogsmate.map` | `05` | English | The red wolf is in the Wolf group: it seeks, and is sought by, the vanilla wolves |
 | 6. Better Crossbreeding | `wsl-deps.avec-bettercrossbreeding.map` | `06` | English | The two halves, list on the male and extension on the mother, both ways, Random |
@@ -30,8 +30,7 @@ From the collection root, once `scripts/Pickle-Status.ps1` says the machine is f
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.sans-facultatifs.map -Filter '01-standalone,!@french'  -Language English
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.sans-facultatifs.map -Filter '01-standalone,!@english' -Language French
-powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-pawnmorpher.map -Filter '02-pawnmorpher,!@french'  -Language English
-powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-pawnmorpher.map -Filter '02-pawnmorpher,!@english' -Language French
+powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-pawnmorpher.map -Filter '02-pawnmorpher' -Language English
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-ads2.map -Filter '03-ads2' -Language English
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-dogsmate.map -Filter '05-dogsmate' -Language English
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod RedWolvesRenew -DepMap wsl-deps.avec-bettercrossbreeding.map -Filter '06-bettercrossbreeding' -Language English
@@ -57,3 +56,7 @@ In practice a ticket is filed through the Ticket Manager (`file-pickle-ticket`),
 ## Build
 
 `Tests/Pickle/Source` builds `Mod/Pickle/Assemblies/RedWolvesRenew.PickleSteps.dll` (net48, Krafs reference packages, Pickle's reference package): `dotnet build Tests/Pickle/Source/RedWolvesRenew.PickleSteps.csproj -c Release`. The intermediate output goes to `build/pickle/` (ignored). The assembly is committed, as in the Dalmatians Renew suite, because the runner stages `Tests/Pickle/Mod` as it stands. Check the steps against the features with `scripts/Check-Steps.ps1 -Mod RedWolvesRenew -StepPrefix "Red Wolves Renew"` before any ticket.
+
+## Pass 2 cut to one scenario (2026-11-10)
+
+Pawnmorpher on top of Humanoid Alien Races aborts the game (exit 134, native crash in `SectionLayer_Sand`) at the second colony load of Pickle's shared `test-colony` fixture, saved without both mods (its pawns carry no `AlienComp` data: 25 x `AlienPartGenerator:804` NullReferenceException). Humanoid Alien Races alone is clean (`wsl-deps.avec-har.map`, bisect ticket c291, 6 of 6). Virginie validated cutting pass 2 to its first scenario; the Pawnmorpher gap is written as not applicable in `TESTING.md`. Upstream Pickle owns the fixture; an issue is drafted for Virginie to post.
