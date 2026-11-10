@@ -5,7 +5,7 @@ repo: Rimworld-Red-Wolves-Renew
 remote: https://github.com/vbardales/Rimworld-Red-Wolves-Renew.git
 visibility: public
 detached: yes
-workflow_stage: playTests[1.0.0]
+workflow_stage: declareDependencies[1.0.0]
 licence: open
 licence_at: "2026-11-02: upstream LICENSE is MIT (Ryan Schneider, 2020), confirmed on RadHazard/RimworldRedWolves (spdx MIT); LICENSE and ATTRIBUTION.md carry it"
 upstream_mod_remotes:
@@ -20,6 +20,7 @@ published: yes
 tested_on: "2026-11-03 pickle 96d4e48 (Pickle only, no game by hand; pass 1 English and French, 3, 5, 6, 7 green)"
 automated: "29 checks passed, 0 failed on 2026-11-03 at Mod/ revision 96d4e48 (Tests/test_mod.py, uv run --with lxml python Tests/test_mod.py); Check-ModBasics and Check-Translations PASS; Run-UnitTests not applicable (no code)"
 remaining:
+  - "2026-11-10: replay-audit: stage moved back from playTests to declareDependencies (4.b, 4.e, 4.g open). Write Mod/About/OptionalCompat.xml (Check-OptionalCompat.ps1 -Mod RedWolvesRenew -Write, then set kind per entry; ERROR: CETeam.CombatExtended, DizzyEevee.BetterCrossbreeding undeclared), list it under the Dependencies section, add workshop_required_items (n/a, no Workshop modDependencies). Then replay from 4.h; sections 5 to 8 were not replayed"
   - "2026-11-02: unverified: source mod of the AnimalEquipment integration unknown (guard Owlchemist.AnimalGear.Equipment, upstream id, in no installed mod; Apparel_SmallAnimal* defs in no Animal Gear family mod checked by Audit). Guard is inert when absent; fix the id if the mod shows up on disk"
   - "2026-11-02: unverified: AlienRace.BackstoryDef keys (2 backstories) not provable by Check-DefInjected (type not resolved); Pawnmorph stagePatches keys are numeric indices into a list merged with the parent, in game only"
   - "2026-11-02: unverified: the game resolving {PAWN_gender} switches in thought and backstory descriptions, raw keys and clipping in game (playTests)"
