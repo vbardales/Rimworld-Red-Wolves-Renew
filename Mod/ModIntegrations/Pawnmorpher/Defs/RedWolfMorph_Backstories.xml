@@ -47,7 +47,6 @@
         <forcedTraitsChance>
             <li>
                 <defName>Psychopath</defName>
-                <degree>0</degree>
                 <chance>50</chance>
             </li>
         </forcedTraitsChance>
