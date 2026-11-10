@@ -3,7 +3,7 @@
         <defName>RedwolfmorphConservationVolunteerGeneral</defName>
         <title>conservation volunteer</title>
         <titleShort>red wolf</titleShort>
-        <baseDescription>[PAWN_nameDef] was part of an animal conservation project on a Midworld that objected to creating life via cloning.  With no other legal means available to bring back extinct species, [PAWN_pronoun] volunteered to be transformed into a red wolf [PAWN_objective]self.  The experiment was aborted before it could be completed, but [PAWN_pronoun] chose to retain the mutations [PAWN_pronoun] had gained.</baseDescription>
+        <description>[PAWN_nameDef] was part of an animal conservation project on a Midworld that objected to creating life via cloning.  With no other legal means available to bring back extinct species, [PAWN_pronoun] volunteered to be transformed into a red wolf [PAWN_objective]self.  The experiment was aborted before it could be completed, but [PAWN_pronoun] chose to retain the mutations [PAWN_pronoun] had gained.</description>
         <slot>Adulthood</slot>
         <bodyTypeFemale>Female</bodyTypeFemale>
         <bodyTypeMale>Male</bodyTypeMale>
@@ -39,7 +39,7 @@
         <defName>RedwolfmorphConservationForcedGeneral</defName>
         <title>red wolf of wall street</title>
         <titleShort>red wolf</titleShort>
-        <baseDescription>[PAWN_nameDef] was a member of the board for a financially successful yet environmentally disasterous megacorporation on [PAWN_possesive] homeworld.  Radical ecoterrorists bombed the headquarters with mutagen-laced gas, turning many of the board members into the very animals their corporate policies once threatened.  [PAWN_nameDef] escaped the worst of the gas, but [PAWN_pronoun] still found [PAWN_objective]self partially transformed into an endangered species of wolf.</baseDescription>
+        <description>[PAWN_nameDef] was a member of the board for a financially successful yet environmentally disasterous megacorporation on [PAWN_possesive] homeworld.  Radical ecoterrorists bombed the headquarters with mutagen-laced gas, turning many of the board members into the very animals their corporate policies once threatened.  [PAWN_nameDef] escaped the worst of the gas, but [PAWN_pronoun] still found [PAWN_objective]self partially transformed into an endangered species of wolf.</description>
         <slot>Adulthood</slot>
         <bodyTypeFemale>Female</bodyTypeFemale>
         <bodyTypeMale>Male</bodyTypeMale>

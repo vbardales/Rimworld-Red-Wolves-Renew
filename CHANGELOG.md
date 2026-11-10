@@ -12,7 +12,7 @@ First release of the 1.6 update of **Red Wolves**, by Pausbrak, last supporting 
 
 The shortest of these updates: the animal itself needed no change at all.
 
-Fixed: the two Pawnmorpher backstories were written as `AlienRace.BackstoryDef`, a type Humanoid Alien Races 1.6 no longer has (it is `AlienRace.AlienBackstoryDef`), so the game logged an error and did not load them; their French text moved with them.
+Fixed: the two Pawnmorpher backstories were written as `AlienRace.BackstoryDef` with a `<baseDescription>` field, neither of which exists in Humanoid Alien Races 1.6 (they are `AlienRace.AlienBackstoryDef` and `<description>`), so the game logged errors and did not load them; their French text moved with them.
 
 ### Added
 
