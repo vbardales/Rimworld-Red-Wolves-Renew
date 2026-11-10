@@ -12,18 +12,9 @@
             <li>FreeMutant</li>
         </spawnCategories>
         <skillGains>
-            <li>
-	            <defName>Social</defName>
-	            <amount>2</amount>
-            </li>
-            <li>
-	            <defName>Animals</defName>
-	            <amount>3</amount>
-            </li>
-            <li>
-	            <defName>Intellectual</defName>
-	            <amount>2</amount>
-            </li>
+            <Social>2</Social>
+            <Animals>3</Animals>
+            <Intellectual>2</Intellectual>
         </skillGains>
         <modExtensions>
             <li Class="Pawnmorph.MorphPawnKindExtension">
@@ -48,10 +39,7 @@
             <li>FreeMutant</li>
         </spawnCategories>
         <skillGains>
-            <li>
-	            <defName>Social</defName>
-	            <amount>6</amount>
-            </li>
+            <Social>6</Social>
         </skillGains>
         <workDisables>
             <li>ManualDumb</li>
