@@ -45,11 +45,9 @@
             <li>ManualDumb</li>
         </workDisables>
         <forcedTraits>
-            <li>
-                <defName>Psychopath</defName>
-                <chance>50</chance>
-            </li>
+            <Psychopath>0</Psychopath>
         </forcedTraits>
+        <forcedTraitsChance>0.5</forcedTraitsChance>
         <modExtensions>
             <li Class="Pawnmorph.MorphPawnKindExtension">
 	            <hediffRange>4~8</hediffRange>
