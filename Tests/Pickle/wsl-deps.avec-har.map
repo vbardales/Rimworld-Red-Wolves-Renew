@@ -1,0 +1,7 @@
+# Bisect of pass 2 (2026-11-10): Humanoid Alien Races alone, without Pawnmorpher, then this mod. Pass 2 (HAR + Pawnmorpher) aborts the game
+# natively at the second map build; this pass shows whether HAR alone survives the colony loads of 01-standalone.
+erdelf.HumanoidAlienRaces 839005762
+nelim.redwolves path:RedWolvesRenew/Mod
+# Shared steps of Nelim's Pickle Tools, as in every pass.
+nelim.pickletools.deffields path:PickleTools/DefFieldSteps/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
