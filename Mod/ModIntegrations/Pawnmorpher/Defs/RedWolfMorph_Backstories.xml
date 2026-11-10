@@ -1,5 +1,5 @@
 <Defs>	
-    <AlienRace.BackstoryDef>
+    <AlienRace.AlienBackstoryDef>
         <defName>RedwolfmorphConservationVolunteerGeneral</defName>
         <title>conservation volunteer</title>
         <titleShort>red wolf</titleShort>
@@ -33,9 +33,9 @@
 	            </morphs>
             </li>
         </modExtensions>
-    </AlienRace.BackstoryDef>
+    </AlienRace.AlienBackstoryDef>
 
-    <AlienRace.BackstoryDef>
+    <AlienRace.AlienBackstoryDef>
         <defName>RedwolfmorphConservationForcedGeneral</defName>
         <title>red wolf of wall street</title>
         <titleShort>red wolf</titleShort>
@@ -70,5 +70,5 @@
 	            </morphs>
             </li>
         </modExtensions>
-    </AlienRace.BackstoryDef>
+    </AlienRace.AlienBackstoryDef>
 </Defs>

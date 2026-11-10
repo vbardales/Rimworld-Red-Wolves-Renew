@@ -26,8 +26,8 @@ Feature: The red wolf morph beside Pawnmorpher
     And Nelim's Pickle Tools: the def "EtherRedWolfMuzzle" of type "HediffDef" comes from the mod "nelim.redwolves"
     And Nelim's Pickle Tools: the def "RedWolfTransformationMemory" of type "ThoughtDef" comes from the mod "nelim.redwolves"
     And Nelim's Pickle Tools: the def "RedWolfRevertedMemory" of type "ThoughtDef" comes from the mod "nelim.redwolves"
-    And Nelim's Pickle Tools: the def "RedwolfmorphConservationVolunteerGeneral" of type "AlienRace.BackstoryDef" comes from the mod "nelim.redwolves"
-    And Nelim's Pickle Tools: the def "RedwolfmorphConservationForcedGeneral" of type "AlienRace.BackstoryDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "RedwolfmorphConservationVolunteerGeneral" of type "AlienRace.AlienBackstoryDef" comes from the mod "nelim.redwolves"
+    And Nelim's Pickle Tools: the def "RedwolfmorphConservationForcedGeneral" of type "AlienRace.AlienBackstoryDef" comes from the mod "nelim.redwolves"
 
   Scenario: loading the colony logs nothing from this mod
     Given the save "test-colony" is loaded
