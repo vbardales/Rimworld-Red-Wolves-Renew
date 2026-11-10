@@ -20,7 +20,7 @@ published: yes
 tested_on: "2026-11-03 pickle 96d4e48 (Pickle only, no game by hand; pass 1 English and French, 3, 5, 6, 7 green)"
 automated: "29 checks passed, 0 failed on 2026-11-03 at Mod/ revision 96d4e48 (Tests/test_mod.py, uv run --with lxml python Tests/test_mod.py); Check-ModBasics and Check-Translations PASS; Run-UnitTests not applicable (no code)"
 remaining:
-  - "2026-11-10: replay-audit: stage moved back from playTests to declareDependencies (4.b, 4.e, 4.g open). Write Mod/About/OptionalCompat.xml (Check-OptionalCompat.ps1 -Mod RedWolvesRenew -Write, then set kind per entry; ERROR: CETeam.CombatExtended, DizzyEevee.BetterCrossbreeding undeclared), list it under the Dependencies section, add workshop_required_items (n/a, no Workshop modDependencies). Then replay from 4.h; sections 5 to 8 were not replayed"
+  - "2026-11-10: replay-audit moved the stage back to declareDependencies (4.b, 4.e, 4.g); closed same day at this commit (OptionalCompat.xml 6 entries, workshop_required_items n/a). Rerun /replay-audit: sections 5 to 8 not yet replayed, stage advance (4.h) follows the replay"
   - "2026-11-02: unverified: source mod of the AnimalEquipment integration unknown (guard Owlchemist.AnimalGear.Equipment, upstream id, in no installed mod; Apparel_SmallAnimal* defs in no Animal Gear family mod checked by Audit). Guard is inert when absent; fix the id if the mod shows up on disk"
   - "2026-11-02: unverified: AlienRace.BackstoryDef keys (2 backstories) not provable by Check-DefInjected (type not resolved); Pawnmorph stagePatches keys are numeric indices into a list merged with the parent, in game only"
   - "2026-11-02: unverified: the game resolving {PAWN_gender} switches in thought and backstory descriptions, raw keys and clipping in game (playTests)"
@@ -31,6 +31,7 @@ remaining:
   - "2026-11-10: AUDIT 4.b/4.e/4.g: OptionalCompat.xml (one entry per optional target) is not in the repo; write it per docs/AUDIT.md 4.g. 6.f: FRENCH_REVIEW.md is the old name, regenerate TRANSLATION_REVIEW.md with scripts/Make-TranslationReview.ps1 (Check-Status INFO)"
   - "2026-11-10: unverified: Art/Preview.config.json is rewritten uncommitted in the working tree (new schema, not by this session); Render-Preview.cjs fails: 'ModIcon-source.png has excessive transparent padding'. Render outputs reverted, nothing committed. Preview.png last committed 2026-11-02. Per AUDIT 2.d to 2.f (2026-11-10) the Preview is now made once at mountPreview from the accepted gallery"
   - "2026-11-02: unverified: never seen running"
+workshop_required_items: "n/a, no mandatory Workshop dependency (modDependencies empty)"
 updated: 2026-11-10
 protocols_read_sha: 7bea5f3fff6113429ad6511c386b8c754c2074a5
 ---
@@ -44,7 +45,7 @@ Check it with `scripts/Check-Status.ps1 -Mod RedWolvesRenew` (no ERROR).
 
 - Hard dependencies (`modDependencies`): none. The mod loads and works alone.
 - DLC: none required. `loadAfter` names the five official DLC for ordering only.
-- Optional integrations, all guarded and inert when the target is absent:
+- Optional integrations, all guarded and inert when the target is absent, declared in Mod/About/OptionalCompat.xml (2026-11-10, 6 entries: Pawnmorpher, Animal Gear (no workshopId, source mod unknown), Combat Extended, A Dog Said 2, Dogs mate, Better Crossbreeding; Check-OptionalCompat OK):
   - Pawnmorpher (`tachyonite.pawnmorpherpublic`, Workshop 1786466855; the upstream `tachyonite.pawnmorpher` guard was dropped: IfModActive needs every listed id, and that one is installed nowhere, so the folder never loaded): `ModIntegrations/Pawnmorpher`, loaded by `IfModActive` in `LoadFolders.xml`.
   - Animal Gear (`Owlchemist.AnimalGear.Equipment`): `ModIntegrations/AnimalEquipment`, loaded by `IfModActive`.
   - Combat Extended: `Patches/Addon_CombatExtended.xml`, `PatchOperationFindMod`.

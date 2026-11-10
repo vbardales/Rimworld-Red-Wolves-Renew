@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OptionalCompat>
+  <li><packageId>CETeam.CombatExtended</packageId><workshopId>2890901044</workshopId><kind>patch</kind></li>
+  <li><packageId>DizzyEevee.BetterCrossbreeding</packageId><workshopId>3520675842</workshopId><kind>patch</kind></li>
+  <li><packageId>tachyonite.pawnmorpherpublic</packageId><workshopId>1786466855</workshopId><kind>synergy</kind></li>
+  <li><packageId>Owlchemist.AnimalGear.Equipment</packageId><workshopId></workshopId><kind>synergy</kind></li>
+  <li><packageId>Mlie.DogsMate</packageId><workshopId>2441132298</workshopId><kind>patch</kind></li>
+  <li><packageId>SamBucher.ADogSaidAnimalProsthetics2</packageId><workshopId>3238353862</workshopId><kind>patch</kind></li>
+</OptionalCompat>
