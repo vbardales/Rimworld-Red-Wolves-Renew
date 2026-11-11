@@ -1,6 +1,7 @@
 # What only this mod asserts: the red wolf's own values, packageId and loadBefore, the Pawnmorpher folder guard, and the four real
 # patches (A Dog Said 2, Dogs mate, Better Crossbreeding, Combat Extended) applied to fixtures with the target present and absent.
 # The generic checks (XML well formed, texPath resolves, About.xml shape, translation coverage) are the shared scripts', run by Test-Mod.ps1.
+# Replaces-Shared: DefRefs ConfigErrors
 # Takes -ModRoot (repository root) and -SharedDir (where lib/PatchEngine.ps1 is read); prints findings, exits 1 on any.
 param([string]$ModRoot = (Join-Path $PSScriptRoot '..'), [string]$SharedDir)
 $ErrorActionPreference = 'Stop'
@@ -124,6 +125,25 @@ Assert-True ((-not (Select-String -LiteralPath (Join-Path $mod 'Patches/Addon_Co
 $d = New-Doc '<Defs><ThingDef><defName>Wolf_Red</defName><statBases/></ThingDef></Defs>'
 Invoke-Patch 'Addon_CombatExtended.xml' $d
 Assert-True (@($d.SelectNodes("/Defs/ThingDef[defName='Wolf_Red']/statBases/*")).Count -eq 0) 'Combat Extended absent: statBases unchanged'
+
+# 7. Check-DefRefs and Check-ConfigErrors, run here with the Pawnmorpher defs scanned (the ModIntegrations/Pawnmorpher folder
+#    inherits 8 abstract parents from it; it is IfModActive, not a modDependency, so the skeleton's plain run cannot resolve them).
+#    One reference is accepted: Animal_Apparel in the AnimalEquipment sweater, a ThingCategoryDef of the Animal Gear family whose
+#    source mod is unknown (STATUS.md); the guard Owlchemist.AnimalGear.Equipment keeps the folder inert when absent. Anything
+#    else unresolved fails. Pawnmorpher not on disk (GitHub runner): skipped loudly, as the skeleton does for these two checks.
+$pawnmorph = 'C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1786466855\1.6'
+if (-not $SharedDir -or -not (Test-Path -LiteralPath (Join-Path $SharedDir 'Check-DefRefs.ps1')) -or -not (Test-Path -LiteralPath $pawnmorph)) {
+    Write-Host 'WARNING Check-DefRefs and Check-ConfigErrors SKIPPED, not passed (shared script or Pawnmorpher files not on disk)'
+} else {
+    foreach ($check in 'Check-DefRefs.ps1', 'Check-ConfigErrors.ps1') {
+        $out = @(& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $SharedDir $check) -ModPath $mod -AlsoScan $pawnmorph -Brief 2>&1 | ForEach-Object { "$_" })
+        $code = $LASTEXITCODE
+        $unresolved = @($out | Where-Object { $_ -match '^\s{2}\S+\s+\S+\.xml' })
+        $unexpected = @($unresolved | Where-Object { $_ -notmatch '^\s+Animal_Apparel\s+ModIntegrations\\AnimalEquipment\\Defs\\Apparel_Sweater\.xml' })
+        if ($unexpected.Count) { foreach ($u in $unexpected) { Assert-True $false "$check unresolved: $($u.Trim())" } }
+        elseif ($code -ne 0 -and -not $unresolved.Count) { Assert-True $false "$check exit ${code}: $(($out | Where-Object { $_ -match '\S' } | Select-Object -Last 5) -join ' | ')" }
+    }
+}
 
 if ($script:findings.Count) { $script:findings | ForEach-Object { Write-Host $_ }; exit 1 }
 Write-Host 'Rule-OwnValues: all checks passed'
