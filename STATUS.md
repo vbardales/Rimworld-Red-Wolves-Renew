@@ -5,7 +5,7 @@ repo: Rimworld-Red-Wolves-Renew
 remote: https://github.com/vbardales/Rimworld-Red-Wolves-Renew.git
 visibility: public
 detached: yes
-workflow_stage: playTests[1.0.0]
+workflow_stage: shootGallery[1.0.0]
 licence: open
 licence_at: "2026-11-02: upstream LICENSE is MIT (Ryan Schneider, 2020), confirmed on RadHazard/RimworldRedWolves (spdx MIT); LICENSE and ATTRIBUTION.md carry it"
 upstream_mod_remotes:
@@ -36,7 +36,7 @@ remaining:
 workshop_required_items: "n/a, no mandatory Workshop dependency (modDependencies empty)"
 code_review_sha: 954e2124ca4be959261e0210d01cdac9dff0c9b0
 updated: 2026-11-11
-protocols_read_sha: d3e206e35f32d4b917732ea20dd7d1fb63504d7d
+protocols_read_sha: ac4114f1491f18329efb742dc7755f21a1f6e9bc
 ---
 
 # Red Wolves Renew: status
