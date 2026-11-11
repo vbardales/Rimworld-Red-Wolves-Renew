@@ -6,7 +6,7 @@ The animal and def steps are Nelim's Pickle Tools' (ColonistRace and DefFieldSte
 
 ## Scope
 
-The offline suite, `Tests/test_mod.py`, owns everything that can be proved without a game: the XML, the values as written, the texture paths, About and LoadFolders, and the real patch files of A Dog Said 2, Dogs mate, Better Crossbreeding and Combat Extended applied to fixtures with the target present and absent.
+The offline suite, `Tests/Rule-OwnValues.ps1` (with the shared checks run by `Tests/Test-Mod.ps1`), owns everything that can be proved without a game: the XML, the values as written, the texture paths, About and LoadFolders, and the real patch files of A Dog Said 2, Dogs mate, Better Crossbreeding and Combat Extended applied to fixtures with the target present and absent.
 
 Pickle is limited to what needs a running game: the values the game kept after loading a whole mod list, the operations an animal is actually offered, the crossing lists other mods build at startup, an information card, the text in the language a pass was launched in, and the `{PAWN_gender ? ... : ... : ...}` switches resolved for a male, a female and a neutral colonist. A scenario that only repeats an offline assertion was not written.
 

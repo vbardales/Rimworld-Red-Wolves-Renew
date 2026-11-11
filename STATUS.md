@@ -18,7 +18,7 @@ dependencies: none
 workshop: 3811403044
 published: yes
 tested_on: "2026-11-10 pickle e480021 (Pickle only, no game by hand; pass 2 cut to scenario 1 green; passes 1, 3, 6, 7 green at 96d4e48, not replayed: later Mod/ changes touch only the Pawnmorpher folder and OptionalCompat.xml)"
-automated: "29 checks passed, 0 failed on 2026-11-10 at Mod/ revision 3fd3a09 (Tests/test_mod.py, uv run --with lxml python Tests/test_mod.py); Check-ModBasics and Check-Translations PASS; Run-UnitTests not applicable (no code)"
+automated: "Tests/Rule-OwnValues.ps1 green on 2026-11-11 (own values and the 4 real patches on fixtures, mutation tested on a copy; replaces Tests/test_mod.py, deleted); Check-ModBasics and Check-Translations PASS; Run-UnitTests not applicable (no code); generated Tests/Test-Mod.ps1 awaits CI/CD regenerate"
 remaining:
   - "2026-11-10: replay-audit 2 (ledger .replays/RedWolvesRenew-20261110.tsv): sections 1 to 7 fulfilled, stage back at playTests. Open 8.a (Mod sha not frozen: three backstory fixes a07c2f8 to 3fd3a09), 8.c and 8.f (pass 2 queued 5d3e 9a1c; pass 3, 5, 6, 7 greens dated at 96d4e48), 8.g, 8.i, 8.k (TESTING.md scenarios not all played), 8.j (regression after the fixes), 8.l (no Docs/runs journal, tested_on old), 8.m (code_review_sha absent), 8.n. Owed: convert Tests/test_mod.py to the generated Tests/Test-Mod.ps1 + Rule-OwnValues.ps1 shape (AGENTS.md Mod tests shape), About description link WARN (Check-ModBasics)"
   - "2026-11-02: unverified: source mod of the AnimalEquipment integration unknown (guard Owlchemist.AnimalGear.Equipment, upstream id, in no installed mod; Apparel_SmallAnimal* defs in no Animal Gear family mod checked by Audit). Guard is inert when absent; fix the id if the mod shows up on disk"

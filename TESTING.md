@@ -99,8 +99,9 @@ thoughts and mutation stages render a form, not the switch text.
 
 ## Automated tests
 
-`Tests/test_mod.py`, run `uv run --with lxml python Tests/test_mod.py`: 29 checks, all green on 2026-11-03 at the
-revision recorded in `STATUS.md`. XML well formed; the values of scenario B; texture paths; `About.xml` and
+`Tests/Rule-OwnValues.ps1` (run `powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Rule-OwnValues.ps1 -SharedDir ../scripts`),
+replacing the former `Tests/test_mod.py`: green on 2026-11-11. The generic checks (XML well formed, texture paths, `About.xml` shape)
+are the shared scripts', run by the generated `Tests/Test-Mod.ps1`. It asserts the values of scenario B; `About.xml` and
 `LoadFolders.xml`; and the real patch files of scenarios D, E, F and I applied to fixtures, with the target
 present and absent, on a list or extension that already exists, and with the A Dog Said predicate trap shown
 to fail. Scripts: `scripts/Check-ModBasics.ps1`, `Check-Translations.ps1`, `Check-DefInjected.ps1` (with the
