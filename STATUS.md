@@ -80,3 +80,28 @@ Check it with `scripts/Check-Status.ps1 -Mod RedWolvesRenew` (no ERROR).
 - Scenarios A to L written in `TESTING.md` (preconditions, actions, expected results; figures checked against the defs). `PUBLICATION.md` written (description block, dependencies, comments owed); gallery order and comments finish at `writeDocs`.
 - Automated: `Tests/test_mod.py`, `uv run --with lxml python Tests/test_mod.py`, 29 checks, all green on 2026-11-03 (XML, values, textures, About and LoadFolders, the real patches of ADS 2, Dogs mate, Better Crossbreeding and Combat Extended (the dead tools Replace was removed 2026-11-03) on fixtures with the target present and absent, and the A Dog Said predicate trap shown to fail). `Check-ModBasics` PASS, `Check-Translations` PASS, `Check-DefInjected` 0 errors. `Run-UnitTests.ps1` not applicable (no unit-test project, no code).
 - Pickle: suite written 2026-11-03 in `Tests/Pickle` on the shared steps of Nelim's Pickle Tools (ColonistRace, DefFieldSteps, PickleTools 813dc0f; Virginie ruled against copying Dalmatians steps, NPT 2682e3 superseded): 6 features, 27 scenario blocks, 12 local steps (`Docs/steps.md`), 7 pass maps, 9 launches (`Tests/Pickle/README.md`). `Check-Steps.ps1 -StepPrefix "Red Wolves Renew"` passes (137 step lines, each one step); the assembly builds with 0 warnings. Never played. Not written: coats, butcher and rot, camera, removal, Combat Extended, Animal Gear (offline only or nothing to prove).
+
+## NSB (sync 2026-11-11, first sync, before the shotlist)
+
+Reads: Places read: 2026-11-11 (SANCTUAIRE-LIEUX.md sections 3, 6, 11; the other place docs not opened). Tribe read: 2026-11-11 (CATALOGUE-ANIMAUX.md and the "who a gallery may use" section only; no roster, profile or looks file opened, no colonist chosen yet). Steps read: 2026-11-11 (PickleTools docs/steps.md animal steps, catalogues/animal-apparel.md; first read, git log since not possible, no previous date).
+
+Rules said back (owner, 2026-11-05 and 2026-11-07): everything in NSB is free; a colonist or domestic animal outside NSB needs Virginie's express validation (an animal the mod adds, or its items address, is authorized by default); a colonist's properties change only with her express validation; every outfit is free; every animal the mod includes must be in the gallery.
+
+No shotlist exists yet (PUBLICATION.md: "Not written yet"), so nothing in the mod's files moved. Nothing in NSB names a wolf; the save holds no Wolf_Red (wild fauna of 41 species, none a wolf). The red wolf is the mod's own animal: authorized by default. It must be spawned by a step (`N adult animals of kind "Wolf_Red" are spawned close together`, `the animal X is given coat N`, `faces`, `has gender`), in a free shooting zone (`emerald-clearing`, free squares A to J), then the decor removed. Candidate places for write-shotlist: `emerald-clearing` (free, neutral), `enclosure` (to embellish, animals), `left-bank` (to do). No colonist is needed by the mod; if the story wants one, take an NSB one.
+
+| Place | Shots that use it | Changes made for the gallery | Last read |
+|---|---|---|---|
+| emerald-clearing (candidate) | none yet (shotlist not written) | none | 2026-11-11 |
+| enclosure (candidate) | none yet | none | 2026-11-11 |
+
+| Colonist | Shots | Outfit per shot | Last read of profile | Exceptions |
+|---|---|---|---|---|
+| none chosen | none | n/a | not read | none |
+
+| Animal | Shots | Outfit | Last read of sheet | Exceptions |
+|---|---|---|---|---|
+| Wolf_Red (the mod's own) | none yet | AnimalEquipment sweater `Apparel_RedWolfSweater` only if Animal Gear is staged, else none | not an NSB animal | none (authorized by default, mod's own animal) |
+
+| Included animal (rule 5) | Shot(s) that show it |
+|---|---|
+| Wolf_Red, 3 alternate coats at 0.8 | MISSING until write-shotlist: gap to fix in the shotlist, one shot showing the base coat and each of the 3 coats (`is given coat N`) |
