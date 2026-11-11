@@ -36,7 +36,7 @@ remaining:
 workshop_required_items: "n/a, no mandatory Workshop dependency (modDependencies empty)"
 code_review_sha: 954e2124ca4be959261e0210d01cdac9dff0c9b0
 updated: 2026-11-10
-protocols_read_sha: 0f62474c87537fa73e94254ef72d34f7dd4af5cb
+protocols_read_sha: d3e206e35f32d4b917732ea20dd7d1fb63504d7d
 ---
 
 # Red Wolves Renew: status
