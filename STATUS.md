@@ -81,27 +81,51 @@ Check it with `scripts/Check-Status.ps1 -Mod RedWolvesRenew` (no ERROR).
 - Automated: `Tests/test_mod.py`, `uv run --with lxml python Tests/test_mod.py`, 29 checks, all green on 2026-11-03 (XML, values, textures, About and LoadFolders, the real patches of ADS 2, Dogs mate, Better Crossbreeding and Combat Extended (the dead tools Replace was removed 2026-11-03) on fixtures with the target present and absent, and the A Dog Said predicate trap shown to fail). `Check-ModBasics` PASS, `Check-Translations` PASS, `Check-DefInjected` 0 errors. `Run-UnitTests.ps1` not applicable (no unit-test project, no code).
 - Pickle: suite written 2026-11-03 in `Tests/Pickle` on the shared steps of Nelim's Pickle Tools (ColonistRace, DefFieldSteps, PickleTools 813dc0f; Virginie ruled against copying Dalmatians steps, NPT 2682e3 superseded): 6 features, 27 scenario blocks, 12 local steps (`Docs/steps.md`), 7 pass maps, 9 launches (`Tests/Pickle/README.md`). `Check-Steps.ps1 -StepPrefix "Red Wolves Renew"` passes (137 step lines, each one step); the assembly builds with 0 warnings. Never played. Not written: coats, butcher and rot, camera, removal, Combat Extended, Animal Gear (offline only or nothing to prove).
 
-## NSB (sync 2026-11-11, first sync, before the shotlist)
+## NSB (sync 2026-11-11, redone with the shotlist)
 
-Reads: Places read: 2026-11-11 (SANCTUAIRE-LIEUX.md sections 3, 6, 11; the other place docs not opened). Tribe read: 2026-11-11 (CATALOGUE-ANIMAUX.md and the "who a gallery may use" section only; no roster, profile or looks file opened, no colonist chosen yet). Steps read: 2026-11-11 (PickleTools docs/steps.md animal steps, catalogues/animal-apparel.md; first read, git log since not possible, no previous date).
+Places read: 2026-11-11 (SANCTUAIRE-LIEUX.md sections 1 to 6, 8, 11 and the free-zones; other place docs not opened). Tribe read: 2026-11-11 (CATALOGUE-ANIMAUX.md, "who a gallery may use", NELIM-PROFIL.md hair line; no other profile opened). Steps read: 2026-11-11 (PickleTools docs/steps.md animal, pose, job, spawn steps; NSB Docs/steps.md grep only; first read).
 
-Rules said back (owner, 2026-11-05 and 2026-11-07): everything in NSB is free; a colonist or domestic animal outside NSB needs Virginie's express validation (an animal the mod adds, or its items address, is authorized by default); a colonist's properties change only with her express validation; every outfit is free; every animal the mod includes must be in the gallery.
+Rules said back (owner 2026-11-05, 2026-11-07): everything in NSB is free; a colonist or domestic animal outside NSB needs Virginie's express validation (an animal the mod adds, or its items address, is authorized by default); a colonist's properties change only with her express validation; every outfit is free; every animal the mod includes is in the gallery.
 
-No shotlist exists yet (PUBLICATION.md: "Not written yet"), so nothing in the mod's files moved. Nothing in NSB names a wolf; the save holds no Wolf_Red (wild fauna of 41 species, none a wolf). The red wolf is the mod's own animal: authorized by default. It must be spawned by a step (`N adult animals of kind "Wolf_Red" are spawned close together`, `the animal X is given coat N`, `faces`, `has gender`), in a free shooting zone (`emerald-clearing`, free squares A to J), then the decor removed. Candidate places for write-shotlist: `emerald-clearing` (free, neutral), `enclosure` (to embellish, animals), `left-bank` (to do). No colonist is needed by the mod; if the story wants one, take an NSB one.
-
-| Place | Shots that use it | Changes made for the gallery | Last read |
+| Place | Shots | Changes for the gallery | Last read |
 |---|---|---|---|
-| emerald-clearing (candidate) | none yet (shotlist not written) | none | 2026-11-11 |
-| enclosure (candidate) | none yet | none | 2026-11-11 |
+| river-bridge | 1 | decor placed then removed (torches, pots, stool, grass); fog | 2026-11-11 |
+| statue-garden | 2 | decor placed then removed; meat on the ground | 2026-11-11 |
+| bare-clearing (free zone) | 3 | decor placed then removed | 2026-11-11 |
+| cloister | 4 | decor placed then removed; place's own torii kept | 2026-11-11 |
+| flower-garden | 5 | decor placed then removed; dusk | 2026-11-11 |
+| exhibition-zone (free zone) | 6 (window) | none | 2026-11-11 |
 
 | Colonist | Shots | Outfit per shot | Last read of profile | Exceptions |
 |---|---|---|---|---|
-| none chosen | none | n/a | not read | none |
+| Nelim | 1 to 5 | teal `Apparel_BasicShirt` dyed rgb (64, 130, 138) over the fixture `Apparel_Pants` in every shot (continuity, cool colour against russet coats); hair `Roo_HD_Hair_Highpony` | 2026-11-11 (hair line only) | none |
 
 | Animal | Shots | Outfit | Last read of sheet | Exceptions |
 |---|---|---|---|---|
-| Wolf_Red (the mod's own) | none yet | AnimalEquipment sweater `Apparel_RedWolfSweater` only if Animal Gear is staged, else none | not an NSB animal | none (authorized by default, mod's own animal) |
+| Ember (Wolf_Red, the mod's own) | 1 to 5 | none (no apparel of the mod staged) | not an NSB animal | none, authorized by default |
+| Sable, Rowan, Flint (Wolf_Red) | 3 | none | not NSB | none, same rule |
+| Pip (Wolf_Red puppy) | 5 | none | not NSB | none, same rule |
+| Bram (Wolf_Timber) | 5 | none | not NSB | wild-wolf cousin of the mod's group (Dogs mate, Better Crossbreeding), not a domestic animal; no validation needed |
 
-| Included animal (rule 5) | Shot(s) that show it |
+| Included animal (rule 5) | Shot(s) |
 |---|---|
-| Wolf_Red, 3 alternate coats at 0.8 | MISSING until write-shotlist: gap to fix in the shotlist, one shot showing the base coat and each of the 3 coats (`is given coat N`) |
+| Wolf_Red plain coat | 3 (Sable) |
+| Wolf_Red coat A | 1, 2, 3, 4, 5 (Ember) |
+| Wolf_Red coat B | 3 (Rowan), 5 (Pip) |
+| Wolf_Red coat C | 3 (Flint) |
+| Wolf_Red puppy | 5 (Pip) |
+
+## Shotlist (2026-11-11, plan only, no capture; full lines in Tests/Pickle/Mod/Pickle/Features/10-gallery.feature)
+
+Story: one day at the Sanctuary, Nelim and a shy red wolf, Ember: dawn bridge, offer, four coats, home under the torii, dusk family. Director pass (Opus) done; kept: forced jobs plus ticks for mid-play poses, one pass map, tight frame in scene 2, one front-facing wolf in scenes 2, 3, 5, Ember as the single hero in all five scenes, cells for every decor item, dusk at 18, window on exhibition-zone; not kept: `Pregnant`, Ingest on the meat (colonist-only step), a dog or a mating heart (no step proven), `sits on the building` (not in steps.md).
+
+| # | name | place, hour, weather | subject (what the image says) | a | b | c | d | e | f | g | j | plan |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | redwolf-1-bridge-fog | river-bridge, 07:00, Fog | Nelim offers meat to a shy red wolf coming across the bridge | ok | 2 lit torches, 2 daylily pots, stool, grass | Ember on the planks | teal shirt, high ponytail, smile | Ember forced to walk 45 ticks, mid-stride | wide rectangle (129,120)-(145,129) | ok | russet on grey fog | 5 |
+| 2 | redwolf-2-the-offer | statue-garden, 09:00, Clear | Ember steps towards the meat Nelim put down | ok | meat, brazier, stool, 3 daylilies, bonsai, torch | Ember from the front | same outfit, hands empty | Ember forced to walk 40 ticks | tight rectangle (151,94)-(160,104) | ok | wolf face fills a third | 5 |
+| 3 | redwolf-3-four-coats | bare-clearing, 12:00, Clear | the four coats of the red wolf with Nelim sharing meat | ok | 2 torches, 2 pots, 3 daylilies, stool, grass, brazier | 4 wolves, two from the front | same, carries meat | Flint lies, Rowan walks, Nelim offers a piece | medium-wide rectangle (189,145)-(206,159) | ok | four coats distinguishable | 5 |
+| 4 | redwolf-4-under-the-torii | cloister, 15:00, Clear | Nelim and Ember walk home through the gate | ok | 2 lit torches, bonsai, stool, 3 daylilies, place's torii and lanterns | Ember in profile | same, looks down at the wolf | both forced to walk, wolf follows within 1 cell, 50 ticks | wide zoom 4.5, long afternoon shadows | ok | russet on stone | 5 |
+| 5 | redwolf-5-family | flower-garden, 18:00, Clear | Ember, a timber wolf and a pup rest together | ok | 2 torches, lit brazier, 2 pots, 4 daylilies, grass bed, stool | 3 animals, pup from the front | same, watches | adults lie, pup walks one cell | medium rectangle (146,103)-(163,116) | ok | three tones, pup in front | 5 |
+| 6 | redwolf-6-info-card | exhibition-zone, 12:00 | information card of the red wolf | window, set aside | | | | | | | | - |
+
+Series k: ok (one story, five hours, one outfit, wide 1 and 4, tight 2, medium 3 and 5, opening bridge, closing dusk, rhythm moves on). Plan mean 5.0 on 5 scenes; scene 6 not rated. Read: GALLERY.md criteria, GALERIE.md, GALLERY-PROPS.md, steps.md (every step of the plan found by name), NELIM-PROFIL.md hair line. NOT verified: that each decor cell is standable and free in the decorated save (read on the empty photos at rate-gallery), that `Fog` is a loaded weather defName, that Ember stays in frame after 40 to 50 forced-walk ticks, that `Roo_HD_Hair_Highpony` is in the pass map, and the plan is a paper score: scenarios and Check-ShotlistVsScenario come next.
