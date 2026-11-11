@@ -48,6 +48,11 @@ foreach ($li in $lf.SelectNodes('/loadFolders/v1.6/li')) {
     if ($li.InnerText -ne '/') { Assert-True (Test-Path -LiteralPath (Join-Path $mod $li.InnerText) -PathType Container) "LoadFolders: folder $($li.InnerText) exists" }
 }
 
+# 2b. Regression of 954e212: the morph's two memories are each its own (revertedMemory once pointed at the transformation memory).
+$morph = New-Object System.Xml.XmlDocument
+$morph.Load((Join-Path $mod 'ModIntegrations/Pawnmorpher/Defs/RedWolfMorph_Def.xml'))
+Assert-True ((Test-List $morph '//transformationMemory' @('RedWolfTransformationMemory')) -and (Test-List $morph '//revertedMemory' @('RedWolfRevertedMemory'))) 'Pawnmorpher morph: transformationMemory RedWolfTransformationMemory, revertedMemory RedWolfRevertedMemory'
+
 # 3. A Dog Said 2: the red wolf joins all three lists, touches no other recipe, and nothing without the mod.
 $adsXml = @'
 <Defs>
