@@ -1,0 +1,14 @@
+{
+  "templateStamp": "ed4669c0a5bf",
+  "workshopId": "3811403044",
+  "packageId": "nelim.redwolves",
+  "releaseTitle": "Red Wolves Renew {version}",
+  "requirePaths": [
+    "Defs",
+    "Languages",
+    "Patches"
+  ],
+  "forbidPaths": [],
+  "previewFile": "About/Preview.png",
+  "galleryDir": "Art/Gallery"
+}
